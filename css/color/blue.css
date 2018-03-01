@@ -1,0 +1,127 @@
+
+a{
+    color:#e58302;
+}
+
+::selection {
+    background:#e58302;
+}
+
+::-moz-selection{
+    background:#e58302;
+}
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.form-control:focus{
+    border: 2px solid #e58302;
+}
+
+
+
+.btn-default:hover,.btn-default:active{
+    border-color:#e58302 !important;
+    color:#e58302;
+}
+
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus{
+    color:#e58302;
+}
+
+.navbar {
+    background-color: #e58302;
+}
+
+.navbar-custom .nav li a {
+    border-top: 3px solid #e58302;
+}
+
+.navbar-custom .nav li.active a {
+    color: #FFF;
+    border-top: 3px solid #FFF;
+}
+
+.section-heading h2 {
+    color: #e58302;
+}
+
+.progress-bar {
+    background:#e58302;
+}
+
+.facts-detail span {
+    color:#e58302;
+}
+
+.service-box-icon {
+    background:#e58302;
+}
+
+.portfolio-filters li {
+    border: 2px solid #e58302;
+}
+
+.portfolio-filters li:hover{
+    background-color: #e58302;
+    border-color:#e58302;
+}
+
+.portfolio-filters li.active{
+    background-color:#e58302;
+    border-color:#e58302;
+}
+
+.image-overlay{
+    background: #e58302;
+}
+
+.cv-timeline-main:before {
+    background:#e58302;
+}
+
+.cv-timeline-main > li .time-icon {
+    color: #e58302;
+}
+
+.cv-timeline-main h4 {
+    color: #e58302;
+}
+
+#testimonials .owl-controls .owl-page.active span {
+    background: #e58302;
+}
+
+.contact-address i {
+    border: 1px solid #e58302;
+    color: #e58302;
+}
+
+.scrollup {
+    background:#e58302;
+}
+
+.scrollup:hover{
+    background:#e58302;
+}
+
+footer {
+    background:#e58302;
+}
+
+footer ul.footer-social li a:hover {
+    color: #e58302;
+}
