@@ -1,0 +1,52 @@
+<style>
+
+    .svg-icon-container{
+        min-height: 1rem;
+        margin: 2px 2px 0px 0px;
+    }
+
+    .alert-box-container{
+        display: flex;
+        border-radius: 4px;
+        min-height: 1rem;
+        vertical-align: center;
+        padding: 0.75rem 1rem 0.75rem 0.5rem;
+        border-left-style: solid;
+        border-left-width: 0.25rem;
+    }
+
+    #info-id{
+        background-color: #EBF8FE;
+        color: #2A6CB3
+    }
+
+    #warning-id{
+        background-color: #FCF4F5;
+        color: #D74937
+    }
+
+</style>
+
+
+<div>
+
+{% set id_name = "" %}
+{% if type == "info" %}
+    {% set id_name = "info-id" %}
+
+{% elif type == "warning" %}
+    {% set id_name = "warning-id" %}
+
+{% endif %}
+<div class="alert-box-container" id={{id_name}}>
+    <div class = "svg-icon-container">
+        {% if type == "info" %}
+            <svg fill="currentColor" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12ZM11 8C11 8.55228 11.4477 9 12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8ZM12 10C13 10 13 11 13 11V16C13 16 13 17 12 17C11 17 11 16 11 16V11C11 11 11 11 10.5 11C10 11 10 10 10 10H12Z"></path></svg>
+        {% elif type == "warning" %}
+            <svg fill="currentColor" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.8831 5.66234C12.5071 4.95454 11.4929 4.95454 11.1169 5.66233L4.28049 18.5308C3.92665 19.1969 4.4094 20 5.16361 20H18.8364C19.5906 20 20.0734 19.1969 19.7195 18.5308L12.8831 5.66234ZM11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17ZM12 15C11 15 11 14 11 14V10C11 10 11 9 12 9C13 9 13 10 13 10V14C13 14 13 15 12 15Z"></path></svg>
+        {% endif %}        
+    </div>
+    {{ body }}
+</div>
+
+</div>
