@@ -44,6 +44,7 @@ header h1 {
 
 .social ul svg {
   max-height: 15px;
+  color: var(--text-color)
 }
 
 nav {

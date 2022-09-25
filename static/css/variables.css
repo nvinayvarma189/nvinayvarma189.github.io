@@ -1,9 +1,9 @@
 :root {
-  --primary: #CB0162;
-  --red: red;
-  --heading-color: #00022E;
-  --text-color: #00022E;
-  --bg-color: rgb(253, 246, 227);
+  --primary: #02AB6D  ;
+  --heading-color: #CFCBC6;
+  --text-color: #CFCBC6;
+  /* --bg-color: rgb(253, 246, 227); */
+  --bg-color: #17191A;
   --black: #212529;
   --white: #fdfdfd;
   --dark-gray: #343334;
