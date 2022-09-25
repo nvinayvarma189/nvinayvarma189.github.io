@@ -5,6 +5,14 @@
     {{ section.title }}
 </h1>
 
+{% if section.title == "TIL" %}
+<p>
+    While I work, I keep learning something new every day. Sometimes, what I've learnt doesn't come to use immediately or frequently. However, I've decided to keep documenting the ones that interest me the most.
+</br>
+    <strong>PS:</strong> You may find these posts not well written (bad sentence formations and spelling mistakes). That is intentional. It is to keep myself moving fast and to free myself for prefectionism.
+</p>
+{% endif %}
+
 {% for year, posts in section.pages | group_by(attribute="year") %}
 <ul class="posts flat">
     <h2 class="archive-year">{{ year }}</h2>
