@@ -1,9 +1,9 @@
 +++
-title = "Notes on introduction to ArgoCD"
+title = "Notes on ArgoCD"
 date = 2022-10-04
 updated = 2022-10-04
 type = "post"
-description = "Beginners introduction to Argo CD and its advantages"
+description = "Beginners introduction to Argo CD and its advantages over alternatives"
 in_search_index = true
 [taxonomies]
 TIL-Tags = ["CI/CD"]
