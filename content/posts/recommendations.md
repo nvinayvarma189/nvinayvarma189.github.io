@@ -1,7 +1,7 @@
 +++
 title = "Recommendations"
 date = 2022-08-15
-updated = 2022-08-16
+updated = 2022-10-17
 type = "post"
 description = "A collection of all the content that I consume regularly and benefit from it."
 in_search_index = true
@@ -114,3 +114,9 @@ Habits, Productivity
 
 1. [James Clear](https://twitter.com/JamesClear)
 2. [Shane Parrish](https://twitter.com/ShaneAParrish)
+
+
+# Movies
+
+### Social Issues
+1. Natchathiram Nagargirathu (Netflix)
