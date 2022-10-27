@@ -17,6 +17,12 @@ Blog-Tags = ["Recommendation"]
 
 When you find a star(*) on favorite, it means there are several more amazing videos in the channel but I just picked one.
 
+<table>
+    <tr>
+       <td>Foo</td>
+    </tr>
+</table>
+
 ### Channels
 
 1. [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)  
@@ -118,5 +124,5 @@ Habits, Productivity
 
 # Movies
 
-### Social Issues
 1. Natchathiram Nagargirathu (Netflix)
+2. Everything Everywhere All At Once
