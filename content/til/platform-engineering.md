@@ -19,16 +19,16 @@ By the above definition of a Platform, the scope of Engineering is huge. Some co
 
 1. **SRE team** - focuses on monitoring, observability, and reliability of systems.  
     Tasks like:  
-    a. Setting up Monitoring platforms (Prometheus, Grafana), Messaging platforms (Kafka, Rabbit MQ, Amazon SQS), and Data platforms (Hadoop, Apache Spark), etc. [Reference](https://youtu.be/0uuOJ1gzcyE?t=101)
+    a. Setting up Monitoring platforms (Prometheus, Grafana), Messaging platforms (Kafka, Rabbit MQ, Amazon SQS), and Data platforms (Hadoop, Apache Spark), etc. [Reference](https://youtu.be/0uuOJ1gzcyE?t=101)  
     b. Working on reaching SLAs, SLOs, and SLIs. [Reference](https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos)
-2. **DevX team** - Providing developers with the tools, services, and automated workflows they need to do their job.
-    Tasks like:
-    a. Creating alerts, and providing a framework for building products.
+2. **DevX team** - Providing developers with the tools, services, and automated workflows they need to do their job.  
+    Tasks like:  
+    a. Creating alerts, and providing a framework for building products.  
     b. Creating pipelines, documentation, and setting up standards across the company to help application development teams move quicker.
-3. **Cloud Engineering team** - They deal with the nuts and bolts of cloud infrastructure.
+3. **Cloud Engineering team** - They deal with the nuts and bolts of cloud infrastructure.  
     Tasks Like:  
-    a. Setting up a VPC and configuring cloud (example: AWS) resources (compute instances, Kubernetes clusters). Cost management, billing, security, etc  
-    b. Policies, Managing compliance, and Cost Monitoring
+    a. Setting up a VPC and configuring cloud (example: AWS) resources (compute instances, Kubernetes clusters). Cost management, billing, security, etc.  
+    b. Policies, Managing compliance, and Cost Monitoring.
 
 In the company I work for, we have a single Platform team that takes care of SRE & DevX. An Infrastructure team that takes care of Cloud Engineering.
 
@@ -43,8 +43,8 @@ Let's take a Cookie factory analogy.
 
 **Application developers** use the tools developed by the Platform team to convert the cookie (that they baked) into a selling product that will reach the customers.
 
-Examples of IaaS: Amazon Web Services, Google Cloud Platform, and Microsoft Azure
-Examples of PaaS: Heroku and Railway
+Examples of IaaS: Amazon Web Services, Google Cloud Platform, and Microsoft Azure  
+Examples of PaaS: Heroku and Railway  
 Examples of SaaS: Dukaan (It lets you create, customize, and launch (service) your website (software) to sell your products)
 
 
