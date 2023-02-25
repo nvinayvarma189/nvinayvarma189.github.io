@@ -19,18 +19,18 @@ Why is it important? Sometimes unit tests are not enough as the production data 
 
 ### Level 1
 
-Let's say production DB is running on 5432 port and Pre-production DB is running on 5433 port on your local machine. You can achieve this by SSH tunneling.
+Let's say you have production DB SSH tunneled to your local machine on 5433 port and Pre-production DB is SSH tunneled on 5434 port on your local machine.
 
-The below command will export the data from a table called `flows` in a postgres DB running on 5432 port as insert statements into a SQL file.
-
-```
-pg_dump --column-inserts --data-only -h localhost -p 5432 -U postgres -d db_name -t flows >  flows.sql
-```
-
-You can then load this data into the pre-production DB running at 5433 with the below command
+The below command will export the data from a table called `flows` in a postgres DB running on 5433 port as insert statements into a SQL file.
 
 ```
-psql -h localhost -U psotgres -p 5433 -d db_name -f flows.sql
+pg_dump --column-inserts --data-only -h localhost -p 5433 -U postgres -d db_name -t flows >  flows.sql
+```
+
+You can then load this data into the pre-production DB running at 5434 with the below command
+
+```
+psql -h localhost -U psotgres -p 5434 -d db_name -f flows.sql
 ```
 
 The dump file looks something like this
@@ -64,15 +64,15 @@ INSERT INTO public.flows (column1, column2, column3) VALUES (value21, value22, v
 
 ### Level 2
 
-This is very slow if you have a large number of datapoints (even 1000s). You can instead use:
+The above can be very slow if you have a large number of datapoints (even 1000s). You can instead use:
 
 ```
-pg_dump --data-only -h localhost -p 5432 -U postgres -d db_name -t flows >  flows.sql
+pg_dump --data-only -h localhost -p 5433 -U postgres -d db_name -t flows >  flows.sql
 ```
 
 You can also dump data from multiple tables like this:
 ```
-pg_dump --data-only -h localhost -p 5432 -U postgres -d db_name -t flows -t clients >  flows_clients.sql
+pg_dump --data-only -h localhost -p 5433 -U postgres -d db_name -t flows -t clients >  flows_clients.sql
 ```
 
 You will get all the data in a single copy command. This is much much faster. The exported data will look like this:
@@ -147,7 +147,7 @@ CREATE TABLE dupe_flows (LIKE flows INCLUDING ALL);
 and then 
 
 ```
-pg_dump --data-only -h localhost -p 5432 -U postgres -d db_name -t flows | sed 's/public.flows/public.dupe_flows/g' > flows.sql
+pg_dump --data-only -h localhost -p 5433 -U postgres -d db_name -t flows | sed 's/public.flows/public.dupe_flows/g' > flows.sql
 ```
 
 It is changing the name of the table from "public.flows" to "public.dupe_flows" in the SQL file. Please be vary that it can have unintended affects if your table name is a substring of some other string. Use it with caution.
@@ -160,25 +160,25 @@ If you already have a IaC (Infrastructure as Code) setup, it is likely that you 
 Sometimes you would want to apply filters on the data from a table. `pg_dump` doesn't seem to have this feature. You can instead use:
 
 ```
-psql -h localhost -p 5432 -U postgres -d db_name -c "\copy (select * from flows where flow_id in ('1', '2', '3') TO flow_dump.csv delimiter ',' csv header;"
+psql -h localhost -p 5433 -U postgres -d db_name -c "\copy (select * from flows where flow_id in ('1', '2', '3') TO flow_dump.csv delimiter ',' csv header;"
 ```
 
 You can then load the data like this:
 ```
-psql -h localhost -U postgres -p 5433 -d db_name -c "\copy flows from 'flow_dump.csv' delimeter ',' csv header;"
+psql -h localhost -U postgres -p 5434 -d db_name -c "\copy flows from 'flow_dump.csv' delimeter ',' csv header;"
 ```
 
 ### Level 6
 The above assumes that the order of the columns between the two tables is the same. In case, it is not, you can specify the order of the columns when loading the data into pre-production DB like this:
 
 ```
-psql -h localhost -U postgres -p 5433 -d db_name -c "\copy flows (column1, column3, column2) from 'flow_dump.csv' delimiter ',' csv header;"
+psql -h localhost -U postgres -p 5434 -d db_name -c "\copy flows (column1, column3, column2) from 'flow_dump.csv' delimiter ',' csv header;"
 ```
 
 
 Note: You will most likely run into issues of timing out if the amount of data you are trying to dump is huge. However, it is not a good idea to dump all the data from production. It would almost never be necessary.
 
-### Putting it together
+# Putting it together
 
 We have the data dumping and loading sorted. How do we stitch them together and how do we run them on a daily basis?
 
