@@ -23,19 +23,19 @@ Let's say you have production DB SSH tunneled to your local machine on 5433 port
 
 The below command will export the data from a table called `flows` in a postgres DB running on 5433 port as insert statements into a SQL file.
 
-```
+```yaml
 pg_dump --column-inserts --data-only -h localhost -p 5433 -U postgres -d db_name -t flows >  flows.sql
 ```
 
 You can then load this data into the pre-production DB running at 5434 with the below command
 
-```
+```yaml
 psql -h localhost -U psotgres -p 5434 -d db_name -f flows.sql
 ```
 
 The dump file looks something like this
 
-```
+```sql
 --
 -- PostgreSQL database dump
 --
@@ -66,18 +66,18 @@ INSERT INTO public.flows (column1, column2, column3) VALUES (value21, value22, v
 
 The above can be very slow if you have a large number of datapoints (even 1000s). You can instead use:
 
-```
+```yaml
 pg_dump --data-only -h localhost -p 5433 -U postgres -d db_name -t flows >  flows.sql
 ```
 
 You can also dump data from multiple tables like this:
-```
+```yaml
 pg_dump --data-only -h localhost -p 5433 -U postgres -d db_name -t flows -t clients >  flows_clients.sql
 ```
 
 You will get all the data in a single copy command. This is much much faster. The exported data will look like this:
 
-```
+```sql
 --
 -- PostgreSQL database dump
 --
@@ -140,13 +140,13 @@ SELECT pg_catalog.setval('public.flowz_id_seq', 1478, true);
 
 It is usually a good idea to try this on a dummy table first. On the DB into which you are trying to dump the data, you can create a dummy `flows` table from the actual `flows` table like this.
 
-```
+```sql
 CREATE TABLE dupe_flows (LIKE flows INCLUDING ALL);
 ```
 
 and then 
 
-```
+```yaml
 pg_dump --data-only -h localhost -p 5433 -U postgres -d db_name -t flows | sed 's/public.flows/public.dupe_flows/g' > flows.sql
 ```
 
@@ -159,19 +159,19 @@ If you already have a IaC (Infrastructure as Code) setup, it is likely that you 
 ### Level 5
 Sometimes you would want to apply filters on the data from a table. `pg_dump` doesn't seem to have this feature. You can instead use:
 
-```
+```sql
 psql -h localhost -p 5433 -U postgres -d db_name -c "\copy (select * from flows where flow_id in ('1', '2', '3') TO flow_dump.csv delimiter ',' csv header;"
 ```
 
 You can then load the data like this:
-```
+```sql
 psql -h localhost -U postgres -p 5434 -d db_name -c "\copy flows from 'flow_dump.csv' delimeter ',' csv header;"
 ```
 
 ### Level 6
 The above assumes that the order of the columns between the two tables is the same. In case, it is not, you can specify the order of the columns when loading the data into pre-production DB like this:
 
-```
+```sql
 psql -h localhost -U postgres -p 5434 -d db_name -c "\copy flows (column1, column3, column2) from 'flow_dump.csv' delimiter ',' csv header;"
 ```
 
