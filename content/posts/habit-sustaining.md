@@ -13,6 +13,22 @@ Blog-Tags = ["Habits"]
 
 # Sustaining a Habit
 
+### Why do people give up?
+There is a misconception that people give up because of lazyness. There is no such thing as lazyness. There is only interest and the lack of it. There is often a reason to give up on something. Actually there are multiple different ones
+
+1. This is boring
+2. The reward I get in return is not worth it
+3. This is not important for me
+4. It is very hard to do.
+
+### What to give up What not to give up
+"Never give up" has to be in the running for the most cliched statements of all time. Does it have value? yes certainly. Does it have value all the time? We'll see.
+
+There are a lot of qoutations on the internet that insipre you to be better. Sometimes they conflict with each. "Never Give up" v/s "A smart person knows when to give up". I want to go on a tangent here to rant about a dissatisfaction of mine: Everybody talks about the person who said the qoute. Nobody talks about the situation from which the qoute arised. Alas it is left for you to experience.
+
+You can give up on the means to achieve a goal. But do not give up on the goal itself. Giving up on the goal means you have decided that something is not important for you. Your personality (the type of person you identify yourself as) has changed. It pays to be gritty about what personality you want to develop. If there are frequent changes to your top level goals, you might want to slow down and get back to the drawing board once.
+
+
 ### How to develop passion?
 
 **What does it mean to be passionate about something?**
@@ -49,7 +65,7 @@ Every such small decision is a vote for the type of person you want to be. Being
 
 A TODO list that forms a narrative.
 
-For instance, I wan to go to badminton everyday. why is that? Why is that? I strive to take care of my body. Wjy is that? A healthy body lets me puruse things even when I'm older.
+For instance, I wan to go to badminton everyday. why is that? Why is that? I strive to take care of my body. Why is that? A healthy body lets me puruse things even when I'm older.
 
 Following such a framework would help you become the person you want to be or it will show that you actually are not doing what you are supposed to be doing. If the latter happens, it is a good thing to get back to the drawing board and reflect upon yourself.
 
@@ -61,7 +77,7 @@ An environment for Habit formation. Reduces the friction to the minimum
 
 ## Measuring Progress
 
-### dsf
+###
 
 ## Compassion
 Compassion for habit forming. Most people overestimate what they can do in 1 year and understimate what they can do in 10 years. Do not beat yourself for bad days. Bad days are part of the process.
