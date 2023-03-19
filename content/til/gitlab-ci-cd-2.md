@@ -1,7 +1,7 @@
 +++
 title = "GitLab CI/CD Intermediate"
 date = 2023-02-25
-updated = 2023-02-25
+updated = 2023-03-20
 type = "post"
 description = "Some basic to intermediate level concepts of GitLab CI/CD"
 in_search_index = true
@@ -135,3 +135,18 @@ a. If you are using VSCode, you can use this extension to have the yaml file CI 
 
 
 14. Mandating that a review is required for an MR to be merged is a GitLab premium feature. You can also setup a check that requires approval before merging code that causes test coverage to decline.
+
+
+15. This is how we can setup IaC with k8s, GitLab CI/CD, AWS, and helm:
+	1. Consider that we have multiple GitLab repos to host application code (usually the code of each microservice) and one GitLab repo for maintaining all the helm charts for their corresponding deployments to k8s (Let's call this state repo)
+	2. A developer merges an MR to the staging branch on their application repo.
+	3. As part of the CI steps (scripts to run tests and lint checks), a docker image is created and is pushed to AWS ECR if the tests run successfully.
+	4. Usually, even these CI steps are imported from a common GitLab repo that hosts all the common GitLab job configurations (let's call this CI-CD GitLab repo).
+	5. Then there will be a job on the application GitLab repo to update the docker image tag in the values.yml file (or the k8s cluster-specific overrides file staging.yml) of that service in the state repo via an MR.
+	6. Once the MR is merged, there will be a job on the state repo which shall run only when there is a change to the staging.yml in the overrides folder of that service's helm chart. This job will run the script to apply the helm changes in that cluster.
+	7. A new version of the application is now rolled out to the staging cluster. Likewise for other clusters as well.
+
+![image](/images/til/gitlab-ci-cd-2/20230315_192634.jpg)
+
+<!--- {{ resize_image(path="/images/gitlab-ci-cd-2/20230315_192634.jpg", width=, height=150, op="scale") }} -->
+
