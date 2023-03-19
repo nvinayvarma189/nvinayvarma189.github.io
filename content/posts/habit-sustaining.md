@@ -3,6 +3,7 @@ title = "Habit Sustaining"
 date = 2023-02-27
 updated = 2023-02-27
 type = "post"
+draft = true
 description = "Thoughts about sustaining habits in the long run"
 in_search_index = true
 [taxonomies]
@@ -91,7 +92,13 @@ This doesn't mean, you don't take responsibility, instead, the burden of consist
 
 ## Habit Stacking
 
+The best cue to trigger the commencement of a habit is another person (posisblr because you are answerable to them and you need to have a dialogue with them). That is why having personal trainers is one of the best ways to sustain a habit. 
+
+One example case where having a human as a habit partner/cue is that When you say you are tired or not feeling it, some trainers say just come and we will figure it out. This makes you wanna overcome the momentary friction. Once you reached the gym your mood changes you feel ready to go. These are some of the days I feel, I'm glad I came to the gym today.
+
 ## Measuring Progress
+
+Attaching a reason to do a task helps but there will be times when you will be questioning your reason to do something. If you are not seeing results, you will feel discouraged. It is not okay to get discouraged. A strong sense of purpose and interest help you stick your habit in the beginnig. But that alone cannot make it sustain the habit. If you are not seeing results, it doesn't seem logical to pursure it. The same logical thinking that helped you get started is now working against you.
 
 ## Compassion
 Compassion for habit forming. Most people overestimate what they can do in 1 year and understimate what they can do in 10 years. Do not beat yourself for bad days. Bad days are part of the process.
