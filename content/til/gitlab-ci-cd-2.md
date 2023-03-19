@@ -148,5 +148,3 @@ a. If you are using VSCode, you can use this extension to have the yaml file CI 
 
 ![image](/images/til/gitlab-ci-cd-2/20230315_192634.jpg)
 
-<!--- {{ resize_image(path="/images/gitlab-ci-cd-2/20230315_192634.jpg", width=, height=150, op="scale") }} -->
-

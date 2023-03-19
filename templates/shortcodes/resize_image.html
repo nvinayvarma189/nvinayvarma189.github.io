@@ -1,0 +1,4 @@
+{% set image = resize_image(path=path, width=width, height=height, op=op) %}
+<img src="{{ image.url }}" />
+
+<!--- use it like this in markdown files: {{ resize_image(path="/images/gitlab-ci-cd-2/20230315_192634.jpg", width=, height=150, op="scale") }} -->
