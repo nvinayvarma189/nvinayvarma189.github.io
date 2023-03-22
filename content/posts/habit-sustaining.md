@@ -10,7 +10,10 @@ in_search_index = true
 Blog-Tags = ["Habits"]
 +++
 
-# Why are Habits important?
+# Why are (Good) Habits important?
+Many people get work done when there is a scary consequence of not doing something they ought to do. While they can get away with many such situations where they pulled an all-nighter to counter the weeks of procrastination, However, it results staying medicore. It doesn't challenge you to improve hence you never reach your maximum potential (which your future self would thank you for). It's like getting trapped in a local maxima.
+
+In the initial years, there isn't much differnce between person A who is irregular versus person B who is hihgly consistent. The filed is more level grounded (It is relatively easier for A to catchup with B). However, in the long-term, the difference will be staggering. You can't compete with someone who has beem practicing something every day, understadning their weakness, and fine tuning their process for many years. 
 
 # Sustaining a Habit
 
@@ -39,7 +42,6 @@ Being passionate means
 
 **Sources of passion**
 Purusit of Fame, Wanting to be different
-
 
 
 **How many things can you be passionate about?**
@@ -90,6 +92,13 @@ Being able to craft your environmet is also a privilage. Example: Having a perso
 
 This doesn't mean, you don't take responsibility, instead, the burden of consistency shifts from your limited amount of will power to an environment that is crafted to your own advantage. Necessity is the mother of motivation too. Atleast in my case, I've seen that too much flexibility stalls growth as I get too comfortable in my shoes.
 
+An another human is great accountability partner. If they are your peers who also have similar goals, it is perfect.
+What can you do to build a suitable environment?
+
+## Beating Inertia is Hard
+Execercising in the Gym is not hard, getting up and going to the Gym is. Reading everyday is not hard, keeping your phone down and opening a book is. These microdecisions are a vote for how you are going to spend the next 40 minutes (it is obvious when you think about it but it hard to realise when you are in the moment).
+
+
 ## Habit Stacking
 
 The best cue to trigger the commencement of a habit is another person (posisblr because you are answerable to them and you need to have a dialogue with them). That is why having personal trainers is one of the best ways to sustain a habit. 
@@ -101,6 +110,17 @@ One example case where having a human as a habit partner/cue is that When you sa
 Attaching a reason to do a task helps but there will be times when you will be questioning your reason to do something. If you are not seeing results, you will feel discouraged. It is not okay to get discouraged. A strong sense of purpose and interest help you stick your habit in the beginnig. But that alone cannot make it sustain the habit. If you are not seeing results, it doesn't seem logical to pursure it. The same logical thinking that helped you get started is now working against you.
 
 ## Compassion
-Compassion for habit forming. Most people overestimate what they can do in 1 year and understimate what they can do in 10 years. Do not beat yourself for bad days. Bad days are part of the process.
+Compassion for habit forming. Most people overestimate what they can do in 1 year and understimate what they can do in 10 years. Do not beat yourself for bad days. Bad days are part of the process. 
 
 You are allowed to give up due to lack of results. But never give up because you are discouraged.
+
+
+I will give you some examples of what how I've become more consistent 
+
+1. When I had the goal to read atleast 2 pages everyday, my success rate was 45%.
+    1. Then I changed the goal from reading a book to going to the nearby library. Now I only had to optimise for going to the library(making the goal as the first step).
+    2. The library is on the way to my office. So I planned in way that I go to the library and then go to office. (Habit Stacking)
+    3. Once I go into the library, I know I will read. It has the perfect environmemt with many people also reading/working with focus. No energy goes into staying focused. It happens automatically. (Environment matters).
+    4. On some days, things come up and I happen to miss practicing my habit. I tell myself it is fine, I don't want to kick myself and self-loath. I write down the reasons why I did not practice my hobby. Once I see a pattern in my failure reasons, I try to tackle it and not see. It gives me the confidence that I can figure it out. (compassion).
+
+The success rate jumpted to 67%. What changed is now I only had to optimise for going to the library (the necessary steps are to).
