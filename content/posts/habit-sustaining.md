@@ -9,6 +9,8 @@ in_search_index = true
 [taxonomies]
 Blog-Tags = ["Habits"]
 +++
+# Why am I writing this?
+I often have phases where I'm super productive and when I'm in an absolute rut. I'm not in control of this situation and I figured I should be doing somehting about it. I currently am in a good phase where I'm able to get things (not just the ones I have to do, even the ones I want to do) done. I've been reading some self-help books and also have been experimenting a few things around my routine and I'm feeling in control. I want to document this feeling of being in control and write down the things I'm doing to stay this way. This is a condensed form of all that I learnt so that it is helpful for my future self. If it helps you too, I'll be glad to know.
 
 # Why are (Good) Habits important?
 Many people get work done when there is a scary consequence of not doing something they ought to do. While they can get away with many such situations where they pulled an all-nighter to counter the weeks of procrastination, However, it results staying medicore. It doesn't challenge you to improve hence you never reach your maximum potential (which your future self would thank you for). It's like getting trapped in a local maxima.
@@ -57,7 +59,7 @@ how did I escape it? Honestly, I don't know how. I think I was finally tired of 
 
 It took me years of juggling multiple things for short periods of time. I was never the top candidate in a field of interest. At some point it occurred to me that being a master in one thing would be more fun
 
-Fuck around and find out is a cliched advice but I found it to be gold. Say yes to a lot of things and then 
+Fuck around and find out is a cliched advice but I found it to be gold. Say yes to a lot of things and then.
 
 ## Importance of passion
 It is difficult to remain on track when you see no logic in what you do. It is much easier to sustain a habit when you have a strong reason to do it. But being passionate is not enough. Even those who achievetd mastery did so with a combination of passion and preserverance.
@@ -98,6 +100,9 @@ What can you do to build a suitable environment?
 ## Beating Inertia is Hard
 Execercising in the Gym is not hard, getting up and going to the Gym is. Reading everyday is not hard, keeping your phone down and opening a book is. These microdecisions are a vote for how you are going to spend the next 40 minutes (it is obvious when you think about it but it hard to realise when you are in the moment).
 
+One tip is to make it easy for you start something. Often times we write down tasks that are too vague. Too much of uncertaininty is not pleasant. When you are looking at a task to pick up, you have to spend mental energy to disect the problem at that point. Imagine you are already in the middle of a work day. You are already a little worked up. The moment you have to spend the mental energy, you immediately do something else to shy away from this duanting task. You open social media and you do a couple of scrolls and 2 hours are gone. Instead if the task is already disected into small portions and the first step doesn't take more than 2 minutes, you are muck likely to start doing it. Once you start doing it, it is easy to continue doing it (unless you are in a very distracting environemnt). Even if you get distracted, it is easy for you to gain your focu back becuase the checklist item you are working on is well within your reach.
+
+When you write down tasks like "start job search", "write blog on habit sustaining" as you would assume is a daunting and mammoth task. I'm generally more motivated during the nights. So that is when I try to arrange my tasks for tomorrow and try to break them down into smaller checklists. The best time to do this is when you are adding this task in your to-do list itself. That is when the iron is hot (when you have the most context).
 
 ## Habit Stacking
 
@@ -124,3 +129,7 @@ I will give you some examples of what how I've become more consistent
     4. On some days, things come up and I happen to miss practicing my habit. I tell myself it is fine, I don't want to kick myself and self-loath. I write down the reasons why I did not practice my hobby. Once I see a pattern in my failure reasons, I try to tackle it and not see. It gives me the confidence that I can figure it out. (compassion).
 
 The success rate jumpted to 67%. What changed is now I only had to optimise for going to the library (the necessary steps are to).
+
+Something I'm still trying to figure out and stop doing
+
+I sometimes fall in a bing loop. All it takes is one moment of opening YT shorts and 2 hours are gone. I'm still trying to figure out what can I do instead of checking my phone whenever there is a 5-10 minute break.
