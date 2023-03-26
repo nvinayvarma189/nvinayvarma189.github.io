@@ -153,16 +153,23 @@ When you find a flat that checks all your boxes, here are some things you can ch
 1. Always try to negotiate on rent and the deposit amount. All owners expect you to negotiate and hence will quote a slightly higher amount at the beginning itself.
     1. It is common for owners to quote unreasonable amounts of deposit (as much as 10 months of rent as a security deposit).
     2. In my experience, they are usually open to reducing either the rent or the deposit amount. But you can ask for a reduction in both. In Feb 20203, we negotiated a 28k rent and 2.8L deposit deal to a 26k rent and 1.4L deposit deal for a 2BHK near Indiranagar (we could not go forward with that option due to some other reason).
+    3. If you really like a house but the security deposit is too high, you can ask if the payment of security deposit can be made in installments.
 2. Some things to check for in the rental agreement document (a document provided by the owner to the tenants):
     1. What is the date to pay the rent every month?
-    2. Once you've moved in, how many days do you have to stay before you can move out?
-    3. If the owner asks you to vacate the flat, how many days do you get to stay before you move out?
-    4. What is the annual rent increment percentage upon the termination of the agreement?
+    2. Once you've moved in, how many days do you have to stay before you can move out? If the owner asks you to vacate the flat, how many days do you get to stay before you move out? This is called a lock-in period.
+        a. Usually both of them are same. The norm is 1-3 months.
+    3. What is the lifetime of the rental agreement?
+        a. Usually it is 11 months after which the rental agreement expires and a new one is supposed to be created.
+    4. What is the annual rent increment percentage upon the expiration of the agreement?
+        a. If this information is not present, the owner can ask for any unreasonable amount as rent post the expiration of current rental agreement and you will find yourself in a pay-or-moveout situation.
     5. If you are sharing the flat with other people (1+ BHK), it is better to have the rental agreement written jointly on all your names. This will help when you file ITR as most people would usually have an HRA component in their CTC structure.
     6. Take note of any cases where you won't be getting your full deposit amount back.
+    7. What all are included as part of the maintenance fee? Is any of the furniture included?
+        a. If yes, make sure to have it written on who owns the repair of an item (owner or the tenant).
 3. Take assurance that you will get a receipt of the deposit amount that you will pay. There are a lot of cases I heard about not getting the deposit amount back.
 4. What is the advance amount that you can pay to finalize the deal for you? This is called a token advance. This can be deducted from the rent or the security deposit amount that you will pay later.
 5. Before signing the rental agreement, read through all the clauses carefully. Ask if something can be edited if you find something problematic.
+6. Most owners would use get the house deep cleaned and painted before handing it over from the previous tenants to the next tenants. However, there is no guarantee.
 
 # Making the Decision
 
