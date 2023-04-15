@@ -103,21 +103,21 @@ There are multiple franchise-based accommodations. These are generally very good
     1. You can save brokerage if you can find a vacancy by yourself. One option is to rent a vehicle ([Royal Brothers](https://www.royalbrothers.com/) and [Vogo](https://vogo.in/)) or a [Yulu Dex](https://www.yulu.bike/products/dex/) or ask a friend. Then keep roaming around your area of interest and you will find To-Let boards (I found a lot of good options this way).
     2. **Beware:** The To-Let boards you see on electric poles and trees are most likely broker numbers. If you see a To-Let board attached to the gate or walls of a house, then it is safe to assume that is by the owners themselves.
 
-## Moving into a pre-occupied flat
+## Moving into a flat
 
-If you're looking to move into a pre-occupied flat, here are a few questions you can ask or check with them:
+If you're looking to move into a flat, here are a few questions you can ask or check with the existing tenants (in the case it is pre-occupied) or the owner:
 
-1. How long have they been staying there?
-2. Any issues with the owner?
+1. How long have the existing tenants been staying there?
+2. You can ask the existing tenants if they faced sny issues with the owner?
     1. In many cases, the owner lives far away. This is the best case.
 3. Is anyone of the current tenants expected to leave soon? If yes, then you will have a task to find their replacement.
 4. Is Wi-Fi present already?
 5. Is a Washing Machine present already?
 6. Is there any setup cost?
-    1. Usually, this includes the items that the existing tenants have already bought and are looking to transfer them to you.
-7. Is there a Geaser?
-    1. Even unfinished flats in Bangalore will have a Geaser. But you don’t want any surprises.
-8. How do they manage drinking water?
+    1. Usually, this includes the items that the existing tenants have already bought and are looking to transfer to you.
+7. Is there a Geyser?
+    1. Even unfinished flats in Bangalore will have a Geyser. But you don’t want any surprises.
+8. How and where to get drinking water from?
 9. Is there any maintenance charge? What does the maintenance charge include?
 10. Is the water bill part of the maintenance charge?
 11. Any parking charge?
@@ -133,6 +133,11 @@ If you're looking to move into a pre-occupied flat, here are a few questions you
 14. Is there a maid already? If yes, what does she take care of?
 15. If you are occupying the place of a tenant who is leaving, ask if they are leaving any of the furniture or appliances behind.
 16. Check if there are any extra charges apart from rent, maid, water, and electricity that recur every month.
+17. Check the phone signals while you are at the flat location. If you can comfortably watch YouTube, it should be good enough.
+18. Bathrooms and kitchens are very important. Check if all the taps are running and if there is a backup for water.
+19. Check how garbage is supposed to be collected. What if you need a backup for it?
+20. Check if the house (or atleast the kitchen) was treated with pest control. It is a huge pain if there are cockroaches already. They just don't go. In the words of a painful tenant -> "Here's how you deal with a cockroach: **1.** Burn the house. **2.** Find new house."
+21. Make sure you have an exhasut fan in the kitchen. It is rarely the case that there is none, but like I said, you don't want any surprises. Same goes with the bathroom as well.
 
 ## Compatibility with Roommates
 
@@ -142,7 +147,7 @@ If you're planning on sharing a flat, here are a few things to consider:
 2. Smoking or drinking habits of your roommates.
 3. If you or your roommate like to host house parties or have friends over, it is nice to have an estimate on the frequency of this.
 4. An estimate of spending capacity and lifestyle of each other.
-    1. Let's say your washing machine isn't working properly, it is nice to have all of you either agree on repairing it or getting a new one.
+    1. Let's say your washing machine isn't working properly, it is nice to have all of you either agree on repairing it or getting a new one. If one follows the lifystyle of looking for a repair and another is eying on a new one, it will lead to awkaward situations.
 
 **Note:** Some of these questions may feel intrusive to ask but it is important to make sure what you are getting into. Bad roommates can be a nightmare. You can decide on what is an absolute NO and check if you all are on the same page.
 
@@ -157,11 +162,11 @@ When you find a flat that checks all your boxes, here are some things you can ch
 2. Some things to check for in the rental agreement document (a document provided by the owner to the tenants):
     1. What is the date to pay the rent every month?
     2. Once you've moved in, how many days do you have to stay before you can move out? If the owner asks you to vacate the flat, how many days do you get to stay before you move out? This is called a lock-in period.
-        a. Usually both of them are same. The norm is 1-3 months.
+        a. Usually both of them are the same. The norm is 1-3 months.
     3. What is the lifetime of the rental agreement?
         a. Usually it is 11 months after which the rental agreement expires and a new one is supposed to be created.
     4. What is the annual rent increment percentage upon the expiration of the agreement?
-        a. If this information is not present, the owner can ask for any unreasonable amount as rent post the expiration of current rental agreement and you will find yourself in a pay-or-moveout situation.
+        a. If this information is not present, the owner can ask for any unreasonable amount as rent post the expiration of the current rental agreement and you will find yourself in a pay-or-moveout situation.
     5. If you are sharing the flat with other people (1+ BHK), it is better to have the rental agreement written jointly on all your names. This will help when you file ITR as most people would usually have an HRA component in their CTC structure.
     6. Take note of any cases where you won't be getting your full deposit amount back.
     7. What all are included as part of the maintenance fee? Is any of the furniture included?
