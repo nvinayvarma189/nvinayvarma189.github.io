@@ -66,7 +66,6 @@ It is difficult to remain on track when you see no logic in what you do. It is m
 
 One of the reasons why people procrastinate is becuase of the availability of instant gratification. When you have a task to do and there is a new video released by your favourite content creator, 
 
-[READ PROCRASTINATOR BLOG]
 
 Every such small decision is a vote for the type of person you want to be. Being reminded about why something is important for you helps you win over your urge to give in to instant gratification.
 
@@ -79,6 +78,10 @@ Imagine you see items on your to-do list, you click on an item and you see the r
 Following such a framework would help you become the person you want to be or it will show that you actually are not doing what you are supposed to be doing. If the latter happens, it is a good thing to get back to the drawing board and reflect upon yourself.
 
 Please note that this framework is not immune to deviations and the crap that life throws at you. There will always be uncertainities and you will have to re-prioritise. Something always comes up as life happens (You relocated to new a place and there is no facility to play badminton). You can always change the means (joining a Gym instead) by which you achieve your top level goal (being fit).
+
+What should the following people do? How should they go about discovering passion?
+
+They’ve been told to follow their passion, but they don’t feel especially passionate about anything. They’ve been told to let their strengths guide them, but they’re not sure what they’re best at. They may have felt they had answers in the past, but they’ve changed and they’re no longer sure who they are or where they’re going.
 
 ## Environment Matters
 
@@ -102,6 +105,8 @@ Execercising in the Gym is not hard, getting up and going to the Gym is. Reading
 
 One tip is to make it easy for you start something. Often times we write down tasks that are too vague. Too much of uncertaininty is not pleasant. When you are looking at a task to pick up, you have to spend mental energy to disect the problem at that point. Imagine you are already in the middle of a work day. You are already a little worked up. The moment you have to spend the mental energy, you immediately do something else to shy away from this duanting task. You open social media and you do a couple of scrolls and 2 hours are gone. Instead if the task is already disected into small portions and the first step doesn't take more than 2 minutes, you are muck likely to start doing it. Once you start doing it, it is easy to continue doing it (unless you are in a very distracting environemnt). Even if you get distracted, it is easy for you to gain your focu back becuase the checklist item you are working on is well within your reach.
 
+Your first step should ideally be as dumb as possible. It should be something that you can do without spending any mental energy. If you want to read 10 pages, your first step should be to reach out for the book and place it in front of you. That's it. That is all that is needed. Next you flip through pages and read the first sentence. 
+
 When you write down tasks like "start job search", "write blog on habit sustaining" as you would assume is a daunting and mammoth task. I'm generally more motivated during the nights. So that is when I try to arrange my tasks for tomorrow and try to break them down into smaller checklists. The best time to do this is when you are adding this task in your to-do list itself. That is when the iron is hot (when you have the most context).
 
 ## Habit Stacking
@@ -118,6 +123,8 @@ Attaching a reason to do a task helps but there will be times when you will be q
 Compassion for habit forming. Most people overestimate what they can do in 1 year and understimate what they can do in 10 years. Do not beat yourself for bad days. Bad days are part of the process. 
 
 You are allowed to give up due to lack of results. But never give up because you are discouraged.
+
+Start giving advice to other people who are in similar situation. It is much easier to advice others. In a sense, you will be advicing yourself from 3rd person view. This can be very motivating.
 
 
 I will give you some examples of what how I've become more consistent 
