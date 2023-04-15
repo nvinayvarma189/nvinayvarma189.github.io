@@ -116,3 +116,14 @@ textarea {
     font-size: 1rem;
   }
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: var(--primary);
+}
+
+::selection {
+  color: white;
+  background: var(--primary);
+}
