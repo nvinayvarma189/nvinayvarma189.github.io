@@ -1,0 +1,25 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<head>
+    <title>{{ page.title }}</title>
+</head>
+
+<body>
+    <h1>{{ page.title }}</h1>
+    <table class="projects-table">
+        <tbody class="projects-body">
+            {% for item in page.extra.sections %}
+            <tr class="projects-row">
+                <td class="projects-data" id="projects-date">{{item.date}}</td>
+                <td class="projects-data" id="projects-name"><a href={{item.link}}>{{ item.title }}</a></td>
+                <td class="projects-data" id="projects-description">{{item.description}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+{% endblock content %}

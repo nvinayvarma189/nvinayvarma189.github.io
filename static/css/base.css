@@ -14,6 +14,7 @@
 @import "tags.css";
 @import "til.css";
 @import "table.css";
+@import "projects.css";
 
 body {
   font-family: var(--font-base);
@@ -126,4 +127,8 @@ textarea {
 ::selection {
   color: white;
   background: var(--primary);
+}
+
+li {
+  padding-bottom: 7px;
 }
