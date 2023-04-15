@@ -3,7 +3,7 @@ title = "Timeouts in Postgres RDS"
 date = 2023-03-25
 updated = 2023-03-25
 type = "post"
-description = "How to trouble shoot different kind of time outs"
+description = "How to troubleshoot different kind of timeouts in Postgres"
 in_search_index = true
 [taxonomies]
 TIL-Tags = ["database"]
