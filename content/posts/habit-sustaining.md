@@ -140,3 +140,7 @@ The success rate jumpted to 67%. What changed is now I only had to optimise for 
 Something I'm still trying to figure out and stop doing
 
 I sometimes fall in a bing loop. All it takes is one moment of opening YT shorts and 2 hours are gone. I'm still trying to figure out what can I do instead of checking my phone whenever there is a 5-10 minute break.
+
+
+
+When should you start optimising for performance more than just consistency? Initially, it should just be consistency.
