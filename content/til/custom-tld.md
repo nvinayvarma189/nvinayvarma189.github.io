@@ -40,5 +40,5 @@ Context: google domains lists `vinayvarma.xyz` at 860 rupees per year whereas `g
 
 The prices of domain names can vary across different domain registrars for a variety of reasons. Some factors that may affect the price of a domain name include:
 1. Each registrar sets its pricing policies for domain names (popularity of the TLD, length of the registration period, level of customer support included). End of the day, it is a pricing competition.
-2. Some domain registrations would come with additional features like emial hosting or SSL certificates.
+2. Some domain registrations would come with additional features like email hosting or SSL certificates.
 3. The price of a domain registration may also vary based on currency exchange rates, especially if you are purchasing a domain from a registrar in a different country.
