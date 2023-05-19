@@ -132,4 +132,8 @@ def download_data(
 download_data()
 ```
 
-**Note:** These are rough snippets. almost like pseudo-code. This is just to communicate the idea across. Please ensure that you structure this properly and provide the right params when yo try to sue this code snippet :)
+## Resource
+1. [Pandas SQL Chunking](https://pythonspeed.com/articles/pandas-sql-chunking/)
+2. [Django bulk_update to update all records](https://stackoverflow.com/questions/61040570/django-using-bulk-update-to-update-all-records)
+
+**Note:** These are rough snippets. almost like pseudo-code. This is just to communicate the idea across. Please ensure that you structure this properly and provide the right params when you try to use this code snippet :)

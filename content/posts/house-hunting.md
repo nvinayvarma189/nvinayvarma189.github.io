@@ -6,7 +6,7 @@ type = "post"
 description = "general guide to finding accommodation in a new city"
 in_search_index = true
 [taxonomies]
-Blog-Tags = ["house-huntung", "non-tech"]
+Blog-Tags = ["house-hunting", "non-tech"]
 +++
 
 # What is this guide?
@@ -98,7 +98,7 @@ There are multiple franchise-based accommodations. These are generally very good
 
 1. If you are short on time and don't want to go through all the hassle
     1. Try contacting some brokers.
-    2. You can get the No broker package. I’ve heard from many folks that they found it very helpful in terms of saving time.
+    2. You can get the No Broker package. I’ve heard from many folks that they found it very helpful in terms of saving time.
 2. If you are short on money
     1. You can save brokerage if you can find a vacancy by yourself. One option is to rent a vehicle ([Royal Brothers](https://www.royalbrothers.com/) and [Vogo](https://vogo.in/)) or a [Yulu Dex](https://www.yulu.bike/products/dex/) or ask a friend. Then keep roaming around your area of interest and you will find To-Let boards (I found a lot of good options this way).
     2. **Beware:** The To-Let boards you see on electric poles and trees are most likely broker numbers. If you see a To-Let board attached to the gate or walls of a house, then it is safe to assume that is by the owners themselves.
@@ -108,7 +108,7 @@ There are multiple franchise-based accommodations. These are generally very good
 If you're looking to move into a flat, here are a few questions you can ask or check with the existing tenants (in the case it is pre-occupied) or the owner:
 
 1. How long have the existing tenants been staying there?
-2. You can ask the existing tenants if they faced sny issues with the owner?
+2. You can ask the existing tenants if they faced any issues with the owner.
     1. In many cases, the owner lives far away. This is the best case.
 3. Is anyone of the current tenants expected to leave soon? If yes, then you will have a task to find their replacement.
 4. Is Wi-Fi present already?
@@ -136,8 +136,8 @@ If you're looking to move into a flat, here are a few questions you can ask or c
 17. Check the phone signals while you are at the flat location. If you can comfortably watch YouTube, it should be good enough.
 18. Bathrooms and kitchens are very important. Check if all the taps are running and if there is a backup for water.
 19. Check how garbage is supposed to be collected. What if you need a backup for it?
-20. Check if the house (or atleast the kitchen) was treated with pest control. It is a huge pain if there are cockroaches already. They just don't go. In the words of a painful tenant -> "Here's how you deal with a cockroach: **1.** Burn the house. **2.** Find new house."
-21. Make sure you have an exhasut fan in the kitchen. It is rarely the case that there is none, but like I said, you don't want any surprises. Same goes with the bathroom as well.
+20. Check if the house (or at least the kitchen) was treated with pest control. It is a huge pain if there are cockroaches already. They just don't go. In the words of a painful tenant -> "Here's how you deal with a cockroach: **1.** Burn the house. **2**.** Find a new house."
+21. Make sure you have an exhaust fan in the kitchen. It is rarely the case that there is none, but as I said, you don't want any surprises. The same goes for the bathroom as well.
 
 ## Compatibility with Roommates
 
@@ -147,7 +147,7 @@ If you're planning on sharing a flat, here are a few things to consider:
 2. Smoking or drinking habits of your roommates.
 3. If you or your roommate like to host house parties or have friends over, it is nice to have an estimate on the frequency of this.
 4. An estimate of spending capacity and lifestyle of each other.
-    1. Let's say your washing machine isn't working properly, it is nice to have all of you either agree on repairing it or getting a new one. If one follows the lifystyle of looking for a repair and another is eying on a new one, it will lead to awkaward situations.
+    1. Let's say your washing machine isn't working properly, it is nice to have all of you either agree on repairing it or getting a new one. If one follows the lifestyle of looking for a repair and another is eying on a new one, it will lead to awkward situations.
 
 **Note:** Some of these questions may feel intrusive to ask but it is important to make sure what you are getting into. Bad roommates can be a nightmare. You can decide on what is an absolute NO and check if you all are on the same page.
 
@@ -158,7 +158,7 @@ When you find a flat that checks all your boxes, here are some things you can ch
 1. Always try to negotiate on rent and the deposit amount. All owners expect you to negotiate and hence will quote a slightly higher amount at the beginning itself.
     1. It is common for owners to quote unreasonable amounts of deposit (as much as 10 months of rent as a security deposit).
     2. In my experience, they are usually open to reducing either the rent or the deposit amount. But you can ask for a reduction in both. In Feb 20203, we negotiated a 28k rent and 2.8L deposit deal to a 26k rent and 1.4L deposit deal for a 2BHK near Indiranagar (we could not go forward with that option due to some other reason).
-    3. If you really like a house but the security deposit is too high, you can ask if the payment of security deposit can be made in installments.
+    3. If you really like a house but the security deposit is too high, you can ask if the payment of the security deposit can be made in installments.
 2. Some things to check for in the rental agreement document (a document provided by the owner to the tenants):
     1. What is the date to pay the rent every month?
     2. Once you've moved in, how many days do you have to stay before you can move out? If the owner asks you to vacate the flat, how many days do you get to stay before you move out? This is called a lock-in period.

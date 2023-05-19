@@ -3,7 +3,7 @@ title = "ML System Design Exercise"
 date = 2023-05-19
 updated = 2023-05-19
 type = "post"
-description = "Trying to document some brainstorming I've dine while trying to design an ML platform."
+description = "Trying to document some brainstorming I've done while trying to design an ML platform."
 in_search_index = true
 [taxonomies]
 Blog-Tags = ["System-Design"]
@@ -228,7 +228,7 @@ mllib model.py --serve
 ### System Monitoring
 
 1. The sentry plugin can be enabled to capture exceptions.
-2. Prometheus-Loki-Grafana to capture logs and display them to the user. Additionally, the user can customize the grafana dashboard with custom PromQL queries to their liking.
+2. Prometheus-Loki-Grafana to capture logs and display them to the user. Additionally, the user can customize the Grafana dashboard with custom PromQL queries to their liking.
 
 ### ML Model Monitoring
 
@@ -252,6 +252,6 @@ I did not think through the following aspects when designing the solution. Mostl
 
 # Final Note
 
-I've had great fun and learning working on this exercise. There are just too many moving components across the product, service, and infrastructure level and I was forced to think about a lot of aspects that lie outside my expertise. I realized I liked designing not just for usability but for also to the user's delight.
+I've had great fun and learning working on this exercise. There are just too many moving components across the product, service, and infrastructure level and I was forced to think about a lot of aspects that lie outside my expertise. I realized I liked designing not just for usability but for also the user's delight.
 
 I might have a go at it again, this time with better research, mockups, and maybe even a PoC :eyes:
