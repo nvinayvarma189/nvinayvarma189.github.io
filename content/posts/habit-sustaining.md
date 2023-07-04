@@ -83,6 +83,7 @@ What should the following people do? How should they go about discovering passio
 
 They’ve been told to follow their passion, but they don’t feel especially passionate about anything. They’ve been told to let their strengths guide them, but they’re not sure what they’re best at. They may have felt they had answers in the past, but they’ve changed and they’re no longer sure who they are or where they’re going.
 
+From [Nat's website](https://nat.org/), Enthusiasm matters! It might be easier to do big things than small things for this reason
 ## Environment Matters
 
 By Environment I mean: The rigidity of your schedule, proximity of work and hobby places, affordability of pursuing an activity, etc.

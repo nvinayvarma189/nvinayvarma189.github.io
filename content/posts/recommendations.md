@@ -6,7 +6,7 @@ type = "post"
 description = "A collection of all the content that I consume regularly and benefit from it."
 in_search_index = true
 [taxonomies]
-Blog-Tags = ["recommendations"]
+Blog-Tags = ["recommendations", "non-tech"]
 +++
 
 {% alert(type="info") %}
