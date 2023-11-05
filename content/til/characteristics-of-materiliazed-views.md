@@ -1,7 +1,7 @@
 +++
 title = "Characteristics of Materiliazed Views"
 date = 2022-09-29
-updated = 2022-09-29
+updated = 2023-11-02
 type = "post"
 description = "Some pointers on when to use them and when to not"
 in_search_index = true
@@ -26,6 +26,7 @@ order by schema_name,
 ### Characteristics:
 1. They are best used when a complex query (joins on multiple tables) has to be
    executed frequently on not so frequently changing data. Refreshing a MV every time (or every 5 minutes) defeats the purpose of using a MV.
+   1. In contrast, a View is used when a simple query (joins on 1 or 2 tables) has to be executed frequently on not so frequently changing data. A View is just a named query and the query is executed every time the View is called. The result you get is from the actual tables. [reference](https://stackoverflow.com/a/43053443/10524266)
 2. They are refreshable. Meaning, the (complex) query is executed again on the
    underlying tables to reflect the updates.
 3. You can create an MV on an exisitng MV.

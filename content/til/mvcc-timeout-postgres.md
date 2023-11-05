@@ -19,7 +19,7 @@ I misunderstood this as statement timeout and was looking to optimise the query.
 
 ## What causes this issue?
 
-Imagine a Write statement is executed on a table in the master Postgresinstance when there is a running select query on the same table in the read replica instance, there are two options:
+Imagine a Write statement is executed on a table in the master Postgres instance when there is a running select query on the same table in the read replica instance, there are two options:
 
 1. Wait for the SELECT statement to be finished before applying the WAL record. In this case, the replication lag increases.
 
