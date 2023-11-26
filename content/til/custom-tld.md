@@ -6,7 +6,7 @@ type = "post"
 description = "What I learned from my curiosity about creating custom TLDs"
 in_search_index = true
 [taxonomies]
-TIL-Tags = ["domains", "DNS"]
+TIL-Tags = ["domains", "dns"]
 +++
 
 **Context:** I was just looking at some domain names for my name on Google domains. I saw that `vinayvarma.com` was already taken. The other domain names were not that exciting and I was not willing to splurge. I got curious: why can't something like `com.vinayvarma` exist?

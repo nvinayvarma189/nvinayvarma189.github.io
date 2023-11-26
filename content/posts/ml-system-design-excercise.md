@@ -6,7 +6,7 @@ type = "post"
 description = "Trying to document some brainstorming I've done while trying to design an ML platform."
 in_search_index = true
 [taxonomies]
-Blog-Tags = ["System-Design"]
+Blog-Tags = ["system-design"]
 +++
 
 Back in October 2022, my manager ([Amresh](https://github.com/ltbringer)) at that time gave me a problem statement to design a platform for ML engineers to carry out the tasks in an ML model lifecycle. The purpose was to help me get better at system design.
