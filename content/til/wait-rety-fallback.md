@@ -66,3 +66,22 @@ def get_openai_response(user_input):
 ```
 
 The values of `wait_exponential` are just an example. You can tweak them according to your needs. Usually, wait_fixed should be good enough for most cases. But if the API you are calling is expected to be under huge load, you might want to use `wait_exponential` to avoid hitting the API too frequently. Please also take into account of how long can your workflow run.
+
+Now, let's say you want to add a fallback option to your workflow. You can do it like this:
+
+```python
+
+def llm_call(user_input):
+    try:
+        response = get_openai_response(user_input)
+        return response['choices'][0]['message']['content']
+    except Exvception as e:
+        logger.error(f"error while calling OpenAI: {e}")
+        # chnage the user_input which is compatible with the fallback API here
+        try:
+            response = get_anthropic_response(user_input)
+            return response
+        except Exception as e:
+            logger.error(f"error while calling anthropic: {e}")
+            return "Sorry, I am not able to understand you right now. Please try again later."
+```
