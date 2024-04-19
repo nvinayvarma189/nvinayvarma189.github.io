@@ -92,6 +92,10 @@ textarea {
   resize: vertical;
 }
 
+li {
+  margin-top: 0.7em;
+}
+
 .site-name {
   color: var(--text-color);
 }
