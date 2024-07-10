@@ -1,5 +1,5 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "https://nvinayvarma189.github.io"
+base_url = "https://vinay.lol"
 
 # The site title and description; used in feeds by default.
 title = "Vinay Varma"
