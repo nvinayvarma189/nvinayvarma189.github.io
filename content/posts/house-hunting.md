@@ -1,7 +1,7 @@
 +++
 title = "General Guide to Finding Accommodation In a New City"
 date = 2023-03-19
-updated = 2023-03-19
+updated = 2024-07-21
 type = "post"
 description = "general guide to finding accommodation in a new city"
 in_search_index = true
@@ -183,3 +183,7 @@ The entire process can get a little overwhelming, and you will face situations w
 So it's best to write down the things that you cannot compromise on and things that are nice to have. Being patient pays well.
 
 If you have any questions, feel free to drop me a DM on Twitter: [@roronoazoro_189](https://twitter.com/roronoazoro_189)
+
+# Further Reading
+
+I just found [this](https://manassaloi.com/2021/01/03/ultimate-house-hunting.html) amazing guide by [Manas](https://x.com/manasjsaloi) which is definitely worth checking out!
