@@ -1,5 +1,5 @@
 +++
-title = "Python interpreter stores unassigned results to _"
+title = "Python interpreter stores unassigned results to '_'"
 date = 2024-06-05
 updated = 2024-06-05
 type = "post"
