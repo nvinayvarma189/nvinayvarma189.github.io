@@ -1,5 +1,5 @@
 +++
-title = "typing.cast in python"
+title = "Use of typing.cast in python"
 date = 2025-07-01
 updated = 2025-07-01
 type = "post"
