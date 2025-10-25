@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Vinay Varma&#x27;s personal website" />
+<meta name="keywords" content="nvinayvarma189, vinay, vinay varma" />
+
+<title>Vinay Varma | Application DB v&#x2F;s Warehouse DB</title>
+<meta property="og:title" content="Vinay Varma | Application DB v&#x2F;s Warehouse DB" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vinay.lol/til/application-db-versus-warehouse-db/" />
+<meta property="og:description" content="Notes on why a Warehouse DB is needed in addition to the application DB" />
+<meta property="og:image" content="" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Application DB v&#x2F;s Warehouse DB" />
+<meta name="twitter:description" content="Notes on why a Warehouse DB is needed in addition to the application DB" />
+<meta property="twitter:image" content="" />
+
+
+    <link rel="alternate" type="application/rss+xml" title="Vinay Varma" href="https://vinay.lol/atom.xml">
+    
+
+    <link href="data:image/x-icon;base64,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" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://vinay.lol/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a class="site-name" href="/">
+            <h1>Vinay Varma</h1>
+        </a>
+        <div class="site-description">
+            <p></p>
+            <!-- <div class="search-container">
+                <span class="search-icon"><i data-feather="search"></i></span>
+                <input id="search" type="search" placeholder="Search">
+                <div class="search-results">
+                    <div class="search-results__items"></div>
+                </div>
+            </div> -->
+        </div>
+        <nav>
+            <div class="links">
+                
+                
+                <a 
+                    href="https://vinay.lol/ ">Home
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/posts/ ">Blog
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/til/ ">TIL
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/projects/ ">Projects
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/books/ ">Books
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/categories/ ">Categories
+                </a>
+                
+            </div>
+        </nav>
+    </header>
+    <article>
+<h1 class="title">
+    Application DB v&#x2F;s Warehouse DB
+</h1>
+
+<article>
+    <p>A data engineer is often required to write pipelines so that engineers from other teams can consume daily production data for their analysis and modelling needs.</p>
+<p>They can either try to read directly from the application DB (the DB that is connected to your main application) or create a new DB (Warehouse DB) to store transformed data which will be ready for analytics.</p>
+<p>It is better to maintain a warehouse DB because:</p>
+<ol>
+<li>Since the uptime and performance of application DB is critical for production usecases, you can keep deleting the old data. The older data can be fetched from the data lake or from the warehouse DB. </li>
+<li>Let's say you want to add a new (derived) column which will make things easier for you analytic purposes, it is harder to make changes to the schema of the application DB than to the warehouse DB</li>
+<li>Application DBs are usually not designed to be performant for analytic purposes. Application DBs are never optimized for long term storage and querying.</li>
+</ol>
+<h3 id="misc">Misc:</h3>
+<p><strong>Data Lake:</strong> A storage location where all of the raw and unprocessed data is dumped for a later use. Storage options like S3 are best.</p>
+<p><strong>Data Warehouse:</strong> A storage location used for storing processed data which is ready for immediate consumption (by product/analytics teams).</p>
+
+</article>
+
+</article>
+    <footer>
+        <div class="social">
+            <ul>
+                <li>
+                    <a href="https://github.com/nvinayvarma189" title="Github"><i data-feather="github"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/roronoazoro_189" title="Twitter"><i data-feather="twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://vinay.lol/atom.xml" title="Vinay Varma"><i
+                            data-feather="rss"></i></a>
+                </li>
+            </ul>
+        </div>
+        <p>
+            © Vinay Varma 2025<br>
+            Powered by <a target="_blank" href="https://getzola.org/">Zola</a>
+        </p>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+    <!-- <script type="text/javascript" src="https://vinay.lol/elasticlunr.min.js"></script>
+    <script type="text/javascript" src="https://vinay.lol/search_index.en.js"></script>
+    <script type="text/javascript" src="https://vinay.lol/js/search.js"></script> -->
+</body>
+
+</html>

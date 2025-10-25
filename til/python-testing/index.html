@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Vinay Varma&#x27;s personal website" />
+<meta name="keywords" content="nvinayvarma189, vinay, vinay varma" />
+
+<title>Vinay Varma | Testing in Python</title>
+<meta property="og:title" content="Vinay Varma | Testing in Python" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vinay.lol/til/python-testing/" />
+<meta property="og:description" content="Notes and lessons learned from writing tests in Python." />
+<meta property="og:image" content="" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Testing in Python" />
+<meta name="twitter:description" content="Notes and lessons learned from writing tests in Python." />
+<meta property="twitter:image" content="" />
+
+
+    <link rel="alternate" type="application/rss+xml" title="Vinay Varma" href="https://vinay.lol/atom.xml">
+    
+
+    <link href="data:image/x-icon;base64,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" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://vinay.lol/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a class="site-name" href="/">
+            <h1>Vinay Varma</h1>
+        </a>
+        <div class="site-description">
+            <p></p>
+            <!-- <div class="search-container">
+                <span class="search-icon"><i data-feather="search"></i></span>
+                <input id="search" type="search" placeholder="Search">
+                <div class="search-results">
+                    <div class="search-results__items"></div>
+                </div>
+            </div> -->
+        </div>
+        <nav>
+            <div class="links">
+                
+                
+                <a 
+                    href="https://vinay.lol/ ">Home
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/posts/ ">Blog
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/til/ ">TIL
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/projects/ ">Projects
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/books/ ">Books
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/categories/ ">Categories
+                </a>
+                
+            </div>
+        </nav>
+    </header>
+    <article>
+<h1 class="title">
+    Testing in Python
+</h1>
+
+<article>
+    <p>I've written this almost a year back. I decided to give an (almost) permanent home here. Since I wrote this mostly for myself, the structure of the blog is not great. However, I believe the content is quite useful for me.</p>
+<h1 id="python-testing-in-visual-studio-code">Python Testing in Visual Studio Code</h1>
+<p>The <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a> for VSCode (developed by Microsoft) makes it easier to navigate the testing process (especially when there a many). If you have the extension installed, you should be able to see a beaker icon on the side panel.</p>
+<p><img src="/images/til/python-testing/beaker-icon.png" alt="The beaker icon" /></p>
+<p>Some advantages of using this capability over using <code>pytest</code> CLI are:</p>
+<ol>
+<li>
+<p><strong>Running a specific test is easier</strong></p>
+<ol>
+<li>
+<p>A tree view of all the test folders, test files, and test functions is displayed in the left panel. You can hover over each item to run (or) run&amp;debug all the test cases that are lower in the hierarchy of the hovered item.</p>
+<p><img src="/images/til/python-testing/tree-view-tests.png" alt="tree view of all the discovered tests" /></p>
+</li>
+<li>
+<p>We can hover over <code>test_fn</code> and run that test alone with a button click instead of doing it with the <a href="https://stackoverflow.com/a/36539692/10524266">pytest CLI like this</a>. Since I struggle to remember the commands, button clicks are faster.</p>
+</li>
+<li>
+<p>You can also run a test from the opened file in VSCode itself. You will see a run icon on the left of each discovered test function</p>
+<p><img src="/images/til/python-testing/run-icon-test.png" alt="A test function with a run icon on the left" /></p>
+</li>
+</ol>
+</li>
+</ol>
+<style>
+
+    .svg-icon-container{
+        min-height: 1rem;
+        margin: 2px 2px 0px 0px;
+    }
+
+    .alert-box-container{
+        display: flex;
+        border-radius: 4px;
+        min-height: 1rem;
+        vertical-align: center;
+        padding: 0.75rem 1rem 0.75rem 0.5rem;
+        border-left-style: solid;
+        border-left-width: 0.25rem;
+    }
+
+    #info-id{
+        background-color: #EBF8FE;
+        color: #2A6CB3
+    }
+
+    #warning-id{
+        background-color: #FCF4F5;
+        color: #D74937
+    }
+
+</style>
+
+
+<div>
+
+
+
+    
+
+
+<div class="alert-box-container" id=info-id>
+    <div class = "svg-icon-container">
+        
+            <svg fill="currentColor" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12ZM11 8C11 8.55228 11.4477 9 12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8ZM12 10C13 10 13 11 13 11V16C13 16 13 17 12 17C11 17 11 16 11 16V11C11 11 11 11 10.5 11C10 11 10 10 10 10H12Z"></path></svg>
+                
+    </div>
+    There are buttons on the UI for the most frequent CLI commands. 
+For example: Re-running failed test cases only
+</div>
+
+</div>
+<ol start="2">
+<li>
+<p><strong>You can view the entire output of the testing log.</strong></p>
+<ol>
+<li>You can switch to the “OUTPUT“ section of the integrated terminal and select “Python Test Log“ to view the entire output.
+<img src="/images/til/python-testing/pytest-log.png" alt="Log of pytest" /></li>
+</ol>
+</li>
+</ol>
+<style>
+
+    .svg-icon-container{
+        min-height: 1rem;
+        margin: 2px 2px 0px 0px;
+    }
+
+    .alert-box-container{
+        display: flex;
+        border-radius: 4px;
+        min-height: 1rem;
+        vertical-align: center;
+        padding: 0.75rem 1rem 0.75rem 0.5rem;
+        border-left-style: solid;
+        border-left-width: 0.25rem;
+    }
+
+    #info-id{
+        background-color: #EBF8FE;
+        color: #2A6CB3
+    }
+
+    #warning-id{
+        background-color: #FCF4F5;
+        color: #D74937
+    }
+
+</style>
+
+
+<div>
+
+
+
+    
+
+
+<div class="alert-box-container" id=info-id>
+    <div class = "svg-icon-container">
+        
+            <svg fill="currentColor" width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12ZM11 8C11 8.55228 11.4477 9 12 9C12.5523 9 13 8.55228 13 8C13 7.44772 12.5523 7 12 7C11.4477 7 11 7.44772 11 8ZM12 10C13 10 13 11 13 11V16C13 16 13 17 12 17C11 17 11 16 11 16V11C11 11 11 11 10.5 11C10 11 10 10 10 10H12Z"></path></svg>
+                
+    </div>
+    TIL: The use of the “OUTPUT“ section on the integrated terminal of VSCode
+We can view the output logs of all the extensions
+</div>
+
+</div>
+<p><img src="/images/til/python-testing/pytest-log-select-vscode.png" alt="Select the log output you want to view" /></p>
+<ol start="3">
+<li>
+<p><strong>View and compare the Test History of a test case easily</strong></p>
+<ol>
+<li>
+<p>If a particular test case has failed now, we can see the test result history in the gutter decorations that will be displayed for each failed test case</p>
+<p><img src="/images/til/python-testing/test-failure-compare.png" alt="a linear history of test results being displayed" /></p>
+</li>
+</ol>
+</li>
+</ol>
+<p><strong>Note:</strong> You can learn more about Python testing in VSCode <a href="https://code.visualstudio.com/docs/python/testing">here</a>.</p>
+<hr />
+<h1 id="monkey-patching">Monkey Patching</h1>
+<p>We shall see how we can leverage monkey patching to test functions that are expected to spit out different values on each run.</p>
+<h3 id="monkey-patching-fixture">Monkey patching fixture</h3>
+<p>Let’s say we have the following function</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>uuid
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">greet</span><span>(</span><span style="color:#ffb964;">greeting</span><span>: str) -&gt; str:
+</span><span>    </span><span style="color:#8fbfdc;">return </span><span>greeting + </span><span style="color:#ffb964;">str</span><span>(uuid.</span><span style="color:#ffb964;">uuid4</span><span>())
+</span></code></pre>
+<p>Let’s try to create a test for this function</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">import </span><span>uuid
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">test_greet</span><span>(</span><span style="color:#ffb964;">monkeypatch</span><span>: MonkeyPatch):
+</span><span>    sample_uuid = </span><span style="color:#ffb964;">str</span><span>(uuid.</span><span style="color:#ffb964;">uuid4</span><span>())
+</span><span>    greeting = </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Hello </span><span style="color:#556633;">&quot;
+</span><span>    </span><span style="color:#8fbfdc;">assert </span><span>greeting + sample_uuid == </span><span style="color:#ffb964;">greet</span><span>(greeting)
+</span></code></pre>
+<p>Such a test will not pass. You will get an error something like this:</p>
+<pre data-lang="javascript" style="background-color:#151515;color:#e8e8d3;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span>./</span><span style="color:#ffb964;">tests</span><span>/</span><span style="color:#ffb964;">test_basic</span><span>.</span><span style="color:#ffb964;">py</span><span>::</span><span style="color:#ffb964;">test_greet Failed</span><span>: [undefined]</span><span style="color:#ffb964;">AssertionError</span><span>: </span><span style="color:#ffb964;">assert </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">Hello 2639f2...-87ef386cae27</span><span style="color:#556633;">&#39; </span><span>== </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">Hello a1436c...-d3b69af84d05</span><span style="color:#556633;">&#39;
+</span><span>  - </span><span style="color:#ffb964;">Hello a1436ca0</span><span>-</span><span style="color:#ffb964;">cf34</span><span>-47</span><span style="color:#ffb964;">c1</span><span>-8</span><span style="color:#ffb964;">aca</span><span>-</span><span style="color:#ffb964;">d3b69af84d05
+</span><span>  + </span><span style="color:#ffb964;">Hello</span><span> 2639</span><span style="color:#ffb964;">f240</span><span>-</span><span style="color:#ffb964;">b792</span><span>-45</span><span style="color:#ffb964;">b6</span><span>-</span><span style="color:#ffb964;">be49</span><span>-87</span><span style="color:#ffb964;">ef386cae27
+</span><span style="color:#ffb964;">monkeypatch </span><span>= &lt;</span><span style="color:#ffb964;">_pytest</span><span>.</span><span style="color:#ffb964;">monkeypatch</span><span>.</span><span style="color:#ffb964;">MonkeyPatch </span><span>object </span><span style="color:#ffb964;">at </span><span style="color:#cf6a4c;">0x7faf98410730</span><span>&gt;
+</span><span>
+</span><span>    </span><span style="color:#ffb964;">def </span><span style="color:#fad07a;">test_greet</span><span>(</span><span style="color:#ffb964;">monkeypatch</span><span>: </span><span style="color:#ffb964;">MonkeyPatch</span><span>):
+</span><span>        </span><span style="color:#ffb964;">sample_uuid </span><span>= </span><span style="color:#fad07a;">str</span><span>(</span><span style="color:#ffb964;">uuid</span><span>.</span><span style="color:#fad07a;">uuid4</span><span>())
+</span><span>        # </span><span style="color:#ffb964;">monkeypatch</span><span>.</span><span style="color:#fad07a;">setattr</span><span>(</span><span style="color:#ffb964;">uuid</span><span>, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">uuid4</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#ffb964;">lambda</span><span>: </span><span style="color:#ffb964;">sample_uuid</span><span>)
+</span><span>        </span><span style="color:#ffb964;">greeting </span><span>= </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Hello </span><span style="color:#556633;">&quot;
+</span><span>&gt;       </span><span style="color:#ffb964;">assert greeting </span><span>+ </span><span style="color:#ffb964;">sample_uuid </span><span>== </span><span style="color:#fad07a;">greet</span><span>(</span><span style="color:#ffb964;">greeting</span><span>)
+</span><span style="color:#ffb964;">E       AssertionError</span><span>: </span><span style="color:#ffb964;">assert </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">Hello 2639f2...-87ef386cae27</span><span style="color:#556633;">&#39; </span><span>== </span><span style="color:#556633;">&#39;</span><span style="color:#99ad6a;">Hello a1436c...-d3b69af84d05</span><span style="color:#556633;">&#39;
+</span><span style="color:#ffb964;">E         </span><span>- </span><span style="color:#ffb964;">Hello a1436ca0</span><span>-</span><span style="color:#ffb964;">cf34</span><span>-47</span><span style="color:#ffb964;">c1</span><span>-8</span><span style="color:#ffb964;">aca</span><span>-</span><span style="color:#ffb964;">d3b69af84d05
+</span><span style="color:#ffb964;">E         </span><span>+ </span><span style="color:#ffb964;">Hello</span><span> 2639</span><span style="color:#ffb964;">f240</span><span>-</span><span style="color:#ffb964;">b792</span><span>-45</span><span style="color:#ffb964;">b6</span><span>-</span><span style="color:#ffb964;">be49</span><span>-87</span><span style="color:#ffb964;">ef386cae27
+</span><span>
+</span><span style="color:#ffb964;">tests</span><span>/</span><span style="color:#ffb964;">test_basic</span><span>.</span><span style="color:#ffb964;">py</span><span>:</span><span style="color:#cf6a4c;">10</span><span>: </span><span style="color:#ffb964;">AssertionError
+</span></code></pre>
+<p>This is because the UUID generated in the <code>test_greet</code> function is <code>2639f240-b792-45b6-be49-87ef386cae27</code> whereas the UUID generated in the <code>greet</code> function is <code>a1436ca0-cf34-47c1-8aca-d3b69af84d05</code></p>
+<p>This is fair because that is how <code>uuid4()</code> works. Every time it is supposed to return us a unique string.</p>
+<p><strong>So how can we test something that keeps changing every time it gets called?</strong>
+This is exactly why <a href="https://docs.pytest.org/en/6.2.x/fixture.html">pytest fixtures</a> are useful. We will now use the Monkey Patching fixture.</p>
+<p>Let’s modify the test function like this:</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">from </span><span>pytest </span><span style="color:#8fbfdc;">import </span><span>MonkeyPatch
+</span><span style="color:#8fbfdc;">import </span><span>uuid
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">test_greet</span><span>(</span><span style="color:#ffb964;">monkeypatch</span><span>: MonkeyPatch):
+</span><span>    sample_uuid = </span><span style="color:#ffb964;">str</span><span>(uuid.</span><span style="color:#ffb964;">uuid4</span><span>())
+</span><span>    monkeypatch.</span><span style="color:#ffb964;">setattr</span><span>(uuid, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">uuid4</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#8fbfdc;">lambda</span><span>: sample_uuid)
+</span><span>    greeting = </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Hello</span><span style="color:#556633;">&quot;
+</span><span>    </span><span style="color:#8fbfdc;">assert </span><span>greeting + sample_uuid == </span><span style="color:#ffb964;">greet</span><span>(greeting)
+</span></code></pre>
+<p><strong>Here is what we did</strong></p>
+<ol>
+<li>
+<p>We made the <code>test_greet</code> function accept a pytest fixture called monkey-patch.</p>
+<ol>
+<li>Note: The argument has to be <code>monkeypatch</code> only. Any other variant or another word will not work.</li>
+</ol>
+</li>
+<li>
+<p>We modified the <code>uuid4</code> function with our own implementation.</p>
+<ol>
+<li>The original implementation of <code>uuid4()</code> is</li>
+</ol>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">uuid4</span><span>():
+</span><span>    </span><span style="color:#888888;">&quot;&quot;&quot;Generate a random UUID.&quot;&quot;&quot;
+</span><span>    </span><span style="color:#8fbfdc;">return </span><span style="color:#ffb964;">UUID</span><span>(</span><span style="color:#ffb964;">bytes</span><span>=os.</span><span style="color:#ffb964;">urandom</span><span>(</span><span style="color:#cf6a4c;">16</span><span>), </span><span style="color:#ffb964;">version</span><span>=</span><span style="color:#cf6a4c;">4</span><span>)
+</span></code></pre>
+<ol start="2">
+<li>After the line <code>monkeypatch.setattr(uuid, &quot;uuid4&quot;, lambda: sample_uuid)</code> it will behave like this</li>
+</ol>
+<pre data-lang="javascript" style="background-color:#151515;color:#e8e8d3;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffb964;">def </span><span style="color:#fad07a;">uuid4</span><span>():
+</span><span>    </span><span style="color:#8fbfdc;">return </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">2639f240-b792-45b6-be49-87ef386cae27</span><span style="color:#556633;">&quot;</span><span> # </span><span style="color:#ffb964;">the contents </span><span>of </span><span style="color:#ffb964;">sample_uuid
+</span></code></pre>
+</li>
+<li>
+<p>Let’s analyse point 2 a bit further</p>
+<ol>
+<li><code>monkeypatch.setattr</code> is helping us replace the implementation of <code>uuid4()</code> function from the <code>uuid</code> module.</li>
+<li>Now every time we call <code>uuid4()</code> , it will always give us <code>sample_uuid</code> (which we hardcoded to &quot;2639f240-b792-45b6-be49-87ef386cae27&quot;)</li>
+<li>After the monkey patch is applied, when we call the <code>greet</code> function (in the assert statement of the <code>test_greet</code> function), we get <code>2639f240-b792-45b6-be49-87ef386cae27</code> from the modified <code>uuid4()</code> function</li>
+</ol>
+</li>
+<li>
+<p>It is important to note that the effect of monkey patching wears off as soon as we exit the test function. That is to say if we call <code>uuid.uuid4()</code> in another test function, we should be expecting the original behavior of <code>uuid.uuid4()</code>to occur.</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">test_greet</span><span>(</span><span style="color:#ffb964;">monkeypatch</span><span>: MonkeyPatch):
+</span><span style="color:#888888;"># no error because uuid4 is modified to return a mock value
+</span><span>    sample_uuid = </span><span style="color:#ffb964;">str</span><span>(uuid.</span><span style="color:#ffb964;">uuid4</span><span>())
+</span><span>    monkeypatch.</span><span style="color:#ffb964;">setattr</span><span>(uuid, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">uuid4</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#8fbfdc;">lambda</span><span>: sample_uuid)
+</span><span>    greeting = </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Hello </span><span style="color:#556633;">&quot;
+</span><span>    </span><span style="color:#8fbfdc;">assert </span><span>greeting + sample_uuid == </span><span style="color:#ffb964;">greet</span><span>(greeting)
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">test_greet2</span><span>():
+</span><span style="color:#888888;"># error will occur becuse uuid4 is not modified in this test. 
+</span><span style="color:#888888;"># The affect of monkeypatch only applies to the test function 
+</span><span style="color:#888888;"># where the fixture is applied
+</span><span>    sample_uuid = </span><span style="color:#ffb964;">str</span><span>(uuid.</span><span style="color:#ffb964;">uuid4</span><span>())
+</span><span>    greeting = </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Hi </span><span style="color:#556633;">&quot;
+</span><span>    </span><span style="color:#8fbfdc;">assert </span><span>greeting + sample_uuid == </span><span style="color:#ffb964;">greet</span><span>(greeting)
+</span></code></pre>
+</li>
+</ol>
+<h3 id="special-mention">Special Mention</h3>
+<ol>
+<li>This approach can be used to test anything that keeps changing every time we run it. Examples: Functions that involve random integers and timestamps.</li>
+<li>Monkey patching doesn’t work if a module has immutable objects or attributes. Example: datetime.datetime. We will have to <a href="https://stackoverflow.com/a/20503374/10524266">patch</a> the entire datetime.datetime class.</li>
+<li>You can also use <a href="https://stackoverflow.com/a/28080767/10524266">freezegun to freeze datetime</a> values for testing purposes.</li>
+</ol>
+<h3 id="monkey-patching-outside-testing">Monkey Patching Outside Testing</h3>
+<p>Monkey patching is not unique to testing. Not even unique to Python. <a href="https://stackoverflow.com/a/6647776/10524266">This</a> has the best explanation of what it is.</p>
+<p><strong>One way we can use this in our day-to-day work is:</strong></p>
+<ol>
+<li>Let’s say, we are facing an issue with a function’s implementation coming from an external library.</li>
+<li>Ideally, the owners of the library have to fix the bug in, write a new test case, wait for the build to pass, and release a new version. After that, we can upgrade the library's version in our codebase.</li>
+<li>However, sometimes, there is no time to die. In such exceptional cases, we can monkey-patch the problematic function with our implementation and then ship our code.</li>
+</ol>
+<h3 id="things-to-be-careful-about-monkey-patching">Things to be careful about Monkey Patching</h3>
+<p>There are serious drawbacks to monkey-patching:</p>
+<ol>
+<li>If two modules attempt to monkey-patch the same method, one of them (whichever one runs last) &quot;wins&quot; and the other patch has no effect. (In some cases, if the &quot;winning&quot; monkey-patch takes care to call the original method, the other patch(es) may also work; but you must hope that the patches do not have contradictory intentions.)</li>
+<li>It creates a discrepancy between the source code on the disk and the observed behavior. This can be very confusing when troubleshooting, especially for anyone other than the monkey-patch's author. Monkey-patching is therefore a kind of antisocial behavior.</li>
+<li>Monkey-patches can be a source of upgrade pain when the patch makes assumptions about the patched object which are no longer true.</li>
+</ol>
+<p><a href="https://web.archive.org/web/20120730014107/http://wiki.zope.org/zope2/MonkeyPatch">This</a> is the source for the above points.</p>
+<h1 id="test-performance-and-coverage">Test Performance and Coverage</h1>
+<h3 id="coverage">Coverage</h3>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffb964;">pytest --cov</span><span>=slu</span><span style="color:#ffb964;"> --cov-report</span><span> html</span><span style="color:#ffb964;"> --cov-report</span><span> term:skip-covered tests/
+</span></code></pre>
+<p>The above statement gives us a coverage report. For each file, we can see the test report below:           <img src="/images/til/python-testing/sample-test-coverage.png" alt="Sample test coverage report" /></p>
+<p>The green lines signify that the tests have touched these lines. It is important to note that it does not mean every possible scenario has been tested for these lines. The red lines are the ones that none of the test functions reached.</p>
+<h3 id="pinning-down-slowest-tests">Pinning Down Slowest Tests</h3>
+<p>You can pass the number with --durations</p>
+<pre data-lang="powershell" style="background-color:#151515;color:#e8e8d3;" class="language-powershell "><code class="language-powershell" data-lang="powershell"><span>pytest --durations=</span><span style="color:#cf6a4c;">0</span><span> — Show all times </span><span style="color:#8fbfdc;">for</span><span> tests and setup and teardown
+</span><span>
+</span><span>pytest --durations=</span><span style="color:#cf6a4c;">1</span><span> — Just show me the slowest test
+</span><span>
+</span><span>pytest --durations=</span><span style="color:#cf6a4c;">50</span><span> — Slowest </span><span style="color:#cf6a4c;">50</span><span>, with times, … etc
+</span></code></pre>
+<p>Usage:</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#888888;"># example command
+</span><span>pytest --durations=</span><span style="color:#cf6a4c;">3
+</span><span style="color:#888888;"># example output
+</span><span>
+</span><span>=============================================================================== slowest </span><span style="color:#cf6a4c;">3 </span><span>durations ===============================================================================
+</span><span style="color:#cf6a4c;">0.39</span><span>s call     tests/test_controller/test_predict_api.py::test_utterances[116918a3bc5138ccced42e825522d0397d5c29327290c0f912d4a5ade97cdf14-payload0]
+</span><span style="color:#cf6a4c;">0.37</span><span>s call     tests/test_controller/test_predict_api.py::test_utterances[</span><span style="color:#cf6a4c;">593e45693169</span><span>a78ef9ac329fd2adee8f6912b370196fefb949fd41348674cdcc-payload3]
+</span><span style="color:#cf6a4c;">0.32</span><span>s call     tests/test_controller/test_predict_api.py::test_utterances[1b464d8c8d00d0d78915ccb3362b2339c6545fac33c3d7b018096690302b671b-payload2]
+</span></code></pre>
+<p>source: <a href="https://stackoverflow.com/a/55095253/10524266">here</a></p>
+<h3 id="test-performance-visualisation">Test Performance Visualisation</h3>
+<p>There is a 3rd party library called <a href="https://pypi.org/project/pytest-benchmark/">Pytest-benchmark</a> which provides a fixture for accurately benchmarking a test case.</p>
+<p>You can use it like this:</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">from </span><span>pytest_benchmark.fixture </span><span style="color:#8fbfdc;">import </span><span>BenchmarkFixture
+</span><span>
+</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">test_greet</span><span>(</span><span style="color:#ffb964;">monkeypatch</span><span>: MonkeyPatch, </span><span style="color:#ffb964;">benchmark</span><span>: BenchmarkFixture):
+</span><span>    sample_uuid = </span><span style="color:#ffb964;">str</span><span>(uuid.</span><span style="color:#ffb964;">uuid4</span><span>())
+</span><span>    monkeypatch.</span><span style="color:#ffb964;">setattr</span><span>(uuid, </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">uuid4</span><span style="color:#556633;">&quot;</span><span>, </span><span style="color:#8fbfdc;">lambda</span><span>: sample_uuid)
+</span><span>    greeting = </span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">Hello </span><span style="color:#556633;">&quot;
+</span><span>    </span><span style="color:#8fbfdc;">assert </span><span>greeting + sample_uuid == </span><span style="color:#ffb964;">benchmark</span><span>(greet, greeting)
+</span></code></pre>
+<p>When we run pytest:</p>
+<pre data-lang="javascript" style="background-color:#151515;color:#e8e8d3;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span>============================= </span><span style="color:#ffb964;">test session starts </span><span>==============================
+</span><span style="color:#ffb964;">platform linux </span><span>-- </span><span style="color:#ffb964;">Python </span><span style="color:#cf6a4c;">3.9</span><span>.</span><span style="color:#cf6a4c;">11</span><span>, </span><span style="color:#ffb964;">pytest</span><span>-</span><span style="color:#cf6a4c;">7.1</span><span>.</span><span style="color:#cf6a4c;">2</span><span>, </span><span style="color:#ffb964;">pluggy</span><span>-</span><span style="color:#cf6a4c;">1.0</span><span>.</span><span style="color:#cf6a4c;">0
+</span><span style="color:#ffb964;">benchmark</span><span>: </span><span style="color:#cf6a4c;">3.4</span><span>.</span><span style="color:#cf6a4c;">1 </span><span>(</span><span style="color:#ffb964;">defaults</span><span>: </span><span style="color:#ffb964;">timer</span><span>=</span><span style="color:#ffb964;">time</span><span>.</span><span style="color:#ffb964;">perf_counter disable_gc</span><span>=</span><span style="color:#ffb964;">False min_rounds</span><span>=</span><span style="color:#cf6a4c;">5 </span><span style="color:#ffb964;">min_time</span><span>=</span><span style="color:#cf6a4c;">0.000005 </span><span style="color:#ffb964;">max_time</span><span>=</span><span style="color:#cf6a4c;">1.0 </span><span style="color:#ffb964;">calibration_precision</span><span>=</span><span style="color:#cf6a4c;">10 </span><span style="color:#ffb964;">warmup</span><span>=</span><span style="color:#ffb964;">False warmup_iterations</span><span>=</span><span style="color:#cf6a4c;">100000</span><span>)
+</span><span>rootdir: /home/roronoa/Desktop/workspace/personal/python_testing
+</span><span>plugins: benchmark-3.4.1
+</span><span>collected 1 item
+</span><span>
+</span><span>tests/test_basic.py .                                                    [100%]
+</span><span>
+</span><span>-------------- generated xml file: /tmp/tmp-5172mcnCmBQDSfPj.xml ---------------
+</span><span>
+</span><span>------------------------------------------------------ benchmark: 1 tests -----------------------------------------------------
+</span><span>Name (</span><span style="color:#ffb964;">time in ns</span><span>)          Min          Max      Mean    StdDev    Median      IQR   Outliers  OPS (</span><span style="color:#ffb964;">Mops</span><span>/</span><span style="color:#ffb964;">s</span><span>)  Rounds  Iterations
+</span><span>-------------------------------------------------------------------------------------------------------------------------------
+</span><span>test_greet            340.0019  16,096.9976  395.4294  117.2442  390.0022  37.9987  4900;5713        2.5289  168663           1
+</span><span>-------------------------------------------------------------------------------------------------------------------------------
+</span><span>
+</span><span>Legend:
+</span><span>  Outliers: 1 Standard Deviation from Mean; 1.5 IQR (</span><span style="color:#ffb964;">InterQuartile Range</span><span>) from 1st Quartile and 3rd Quartile.
+</span><span>  OPS: Operations Per Second, computed as 1 / Mean
+</span><span>============================== 1 passed in 1.55s ===============================
+</span></code></pre>
+<p>To visualize it:</p>
+<pre data-lang="javascript" style="background-color:#151515;color:#e8e8d3;" class="language-javascript "><code class="language-javascript" data-lang="javascript"><span style="color:#ffb964;">pytest </span><span>--</span><span style="color:#ffb964;">benchmark</span><span>-</span><span style="color:#ffb964;">histogram
+</span></code></pre>
+<p>This will provide an SVG file that has the histogram of the performance. Pytest-benchmark runs the code several times to give us a median value.     <img src="/images/til/python-testing/pytest-benchmark-histogram.png" alt="pytest-benchmark histogram visualization of two test cases side by side" /></p>
+<p><strong>Note:</strong> Pytest-benchmark gives us an accurate picture as opposed to finding the difference between the times at the start and end of a function. It accounts for asynchronous code too.</p>
+<h1 id="the-importance-of-negative-test-cases">The Importance of Negative Test Cases</h1>
+<p>Some time ago, I was watching this video(<a href="https://www.youtube.com/watch?v=vKA4w2O61Xo">The Most Common Cognitive Bias</a>) by Veritasium and I realized that the learnings from the video can directly be applied to writing tests for code.</p>
+<p><strong>Here is what I gathered:</strong></p>
+<ol>
+<li>There was a theory that all swans are white. So every white swan that you come across makes you think, “Yeah the theory is pretty good”.</li>
+<li>People in the video are asking a question for which they expect the answer to be yes.</li>
+<li>But you want to get to the NOs because that is much more information for you than the yes. A “yes” confirms what you are thinking, and a “no” breaks what you are thinking.</li>
+<li>The scientific way to prove that something is true is to constantly try and disprove it. Only when we are not able to disprove it, we must be getting closer to something true.</li>
+<li>If you think something is true, you need to try as hard as you can to disprove it. That is the only way to not fool yourself. Every &quot;no&quot; is part of the answer leading to &quot;yes&quot;.</li>
+<li>Cognitive Bias is such that humans generally want to confirm the truth with similar data (pattern matching), not get closer to the truth by proving false data (edge case detection). Both have value, but the latter is critical. (a comment on the same video)</li>
+</ol>
+<h3 id="applying-it-to-writing-tests">Applying it to Writing Tests</h3>
+<p>Trying to apply what we learned above: Suppose there is a function that takes in a list of numbers and returns True/False based on if the numbers follow a certain pattern or not. Considering the code implementation as a black box (which can happen if you are new to the project or if the code is hard to read), how would you go ahead and write the test cases?</p>
+<ol>
+<li>You can write a test case with 2, 4, and 8 and you get <code>True</code> as the result. This is a positive test case.</li>
+<li>Now you can write N such test cases where you expect <code>True</code> as the result. Let’s say you think the pattern is “<strong>multiply by 2</strong>“. Multiple positive test cases will strengthen your belief that you’ve figured out the pattern. But also this can lead to bias.</li>
+<li>Instead, once you have a hypothesis, the best way to verify it is to disprove it.</li>
+<li>So as the second test case, you can write 2, 4, and 7 and expect to get <code>False</code>. Surprise! you get <code>True</code> again. This negative test case helped you avoid cognitive bias.</li>
+<li>After some iterations, you’ve formed a hypothesis that the pattern is “<strong>numbers in ascending order</strong>“. You write some positive test cases. Now you have a stronger hypothesis. Then you write a negative test case (input: 2, 5, 1) and expect to get <code>False</code>. Once your negative test case also passes, that’s when you can be more confident about your hypothesis.</li>
+<li>Positive and Negative test cases together give us double confirmation of our hypothesis.</li>
+</ol>
+<h1 id="misc-learnings">Misc Learnings</h1>
+<ol>
+<li>If your function code is reading any value from environment variables, configuring pytest will have issues. To solve this, you can create a <code>.env</code> file with all the environment variables. Post this, you can configure pytest with VSCode python.</li>
+<li>Every statement in a Makefile runs in separate sessions.</li>
+</ol>
+
+</article>
+
+</article>
+    <footer>
+        <div class="social">
+            <ul>
+                <li>
+                    <a href="https://github.com/nvinayvarma189" title="Github"><i data-feather="github"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/roronoazoro_189" title="Twitter"><i data-feather="twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://vinay.lol/atom.xml" title="Vinay Varma"><i
+                            data-feather="rss"></i></a>
+                </li>
+            </ul>
+        </div>
+        <p>
+            © Vinay Varma 2025<br>
+            Powered by <a target="_blank" href="https://getzola.org/">Zola</a>
+        </p>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+    <!-- <script type="text/javascript" src="https://vinay.lol/elasticlunr.min.js"></script>
+    <script type="text/javascript" src="https://vinay.lol/search_index.en.js"></script>
+    <script type="text/javascript" src="https://vinay.lol/js/search.js"></script> -->
+</body>
+
+</html>

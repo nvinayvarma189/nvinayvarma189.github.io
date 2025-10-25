@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Vinay Varma&#x27;s personal website" />
+<meta name="keywords" content="nvinayvarma189, vinay, vinay varma" />
+
+<title>Vinay Varma | ML System Design Exercise</title>
+<meta property="og:title" content="Vinay Varma | ML System Design Exercise" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vinay.lol/posts/ml-system-design-excercise/" />
+<meta property="og:description" content="Trying to document some brainstorming I&#x27;ve done while trying to design an ML platform." />
+<meta property="og:image" content="" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="ML System Design Exercise" />
+<meta name="twitter:description" content="Trying to document some brainstorming I&#x27;ve done while trying to design an ML platform." />
+<meta property="twitter:image" content="" />
+
+
+    <link rel="alternate" type="application/rss+xml" title="Vinay Varma" href="https://vinay.lol/atom.xml">
+    
+
+    <link href="data:image/x-icon;base64,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" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="https://vinay.lol/css/base.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a class="site-name" href="/">
+            <h1>Vinay Varma</h1>
+        </a>
+        <div class="site-description">
+            <p></p>
+            <!-- <div class="search-container">
+                <span class="search-icon"><i data-feather="search"></i></span>
+                <input id="search" type="search" placeholder="Search">
+                <div class="search-results">
+                    <div class="search-results__items"></div>
+                </div>
+            </div> -->
+        </div>
+        <nav>
+            <div class="links">
+                
+                
+                <a 
+                    href="https://vinay.lol/ ">Home
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/posts/ ">Blog
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/til/ ">TIL
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/projects/ ">Projects
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/books/ ">Books
+                </a>
+                
+                
+                <a 
+                    href="https://vinay.lol/categories/ ">Categories
+                </a>
+                
+            </div>
+        </nav>
+    </header>
+    <article>
+
+<section class="post">
+    <div class="post-header">
+        <div class="meta">
+            <div class="date">
+                <span class="day">19</span>
+                <span class="rest">May 2023</span>
+            </div>
+        </div>
+
+        <div class="matter">
+            <h1 class="title">ML System Design Exercise</h1>
+        </div>
+    </div>
+    <div>
+        
+        <ul>
+            
+            <li>
+                <a href="https://vinay.lol/posts/ml-system-design-excercise/#problem-statement">Problem Statement</a>
+                
+            </li>
+            
+            <li>
+                <a href="https://vinay.lol/posts/ml-system-design-excercise/#questions">Questions</a>
+                
+                <ul>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#data">Data</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#training">Training</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#evaluation">Evaluation</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#serving">Serving</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#misc">Misc</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#retrospective-questions">Retrospective Questions</a>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                <a href="https://vinay.lol/posts/ml-system-design-excercise/#solutioning">Solutioning</a>
+                
+                <ul>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#frontend">Frontend</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#data-1">Data</a>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#development-setup">Development Setup</a>
+                        
+                        <ul>
+                            
+                            <li>
+                                <a href="https://vinay.lol/posts/ml-system-design-excercise/#code-structure">Code Structure</a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://vinay.lol/posts/ml-system-design-excercise/#parameterization">Parameterization</a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://vinay.lol/posts/ml-system-design-excercise/#training-evaluation-requests">Training&#x2F;Evaluation Requests</a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://vinay.lol/posts/ml-system-design-excercise/#deployment">Deployment</a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#monitoring">Monitoring</a>
+                        
+                        <ul>
+                            
+                            <li>
+                                <a href="https://vinay.lol/posts/ml-system-design-excercise/#system-monitoring">System Monitoring</a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://vinay.lol/posts/ml-system-design-excercise/#ml-model-monitoring">ML Model Monitoring</a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        <a href="https://vinay.lol/posts/ml-system-design-excercise/#missing-pieces">Missing Pieces</a>
+                        
+                    </li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li>
+                <a href="https://vinay.lol/posts/ml-system-design-excercise/#final-note">Final Note</a>
+                
+            </li>
+            
+        </ul>
+        
+    </div>
+    <article>
+        <p>Back in October 2022, my manager (<a href="https://github.com/ltbringer">Amresh</a>) at that time gave me a problem statement to design a platform for ML engineers to carry out the tasks in an ML model lifecycle. The purpose was to help me get better at system design.</p>
+<p>Looking back at it, the homework I did and the material I read for this exercise seemed quite fruitful and is still interesting to me. This prompted me to document the way I attacked this problem statement as a future reference for myself.</p>
+<h1 id="problem-statement">Problem Statement</h1>
+<p><em>Design a system to train, deploy, serve, evaluate ML models.</em></p>
+<ol>
+<li>We receive about 100k model training requests every day.</li>
+<li>Assume labelled data exists but you have to design abstractions around it.</li>
+<li>We want to deploy quickly most of the time but attempts to deploy repeatedly should come with a cost (i.e. careless attempts to deploy should be penalized).</li>
+<li>Some data scientists can be clueless about testing and can try load-testing the production API. How to address this?</li>
+</ol>
+<p><em>you want to think of other problems like 4 too, this is intentionally a small list</em></p>
+<h1 id="questions">Questions</h1>
+<p>Below is the list of questions I asked to further understand the scope of the platform. This section is written in a question-answer fashion, where the question was asked by me and the answer was given by my manager.</p>
+<h3 id="data">Data</h3>
+<ol>
+<li>
+<p><strong>Question:</strong> How do the users provide data to me? Do they upload it to some storage location from which I have to read from? or do I have to provide them an interface to upload the datasets to a storage location of my choice (which is abstracted to them)?<br />
+<strong>Answer:</strong> They have an API. Imagine an interface where they can upload a dataset as a file or a URL.</p>
+</li>
+<li>
+<p><strong>Question:</strong> Can a user upload multiple versions of the same dataset?<br />
+<strong>Answer:</strong> Not for a single training request. Dataset reuse is out of scope, but think about retries if anything fails, you don’t want the user to re-upload the dataset.</p>
+</li>
+<li>
+<p><strong>Question:</strong> What is the largest size of data that I can expect?<br />
+<strong>Answer:</strong> 100 kb avg. 10GB max</p>
+</li>
+<li>
+<p><strong>Question:</strong> What kind of datasets should I expect? Can it be of any modality (image/text/audio/video/tabular, etc) or of a single modal only? Can I expect a single dataset comprising multiple modalities together?<br />
+<strong>Answer:</strong> Any of these should be possible for this platform.</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should they be able to write pre-processors and post-processors?<br />
+<strong>Answer:</strong> Out of scope</p>
+</li>
+</ol>
+<h3 id="training">Training</h3>
+<ol>
+<li>
+<p><strong>Question:</strong> Should the users be allowed to customize how to train the model?<br />
+<strong>Answer:</strong> Definitely, but this is an abstraction. How part of the training is assumed to exist.</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should the users be provided with the ability to tune the hyperparameters before each training request?<br />
+<strong>Answer:</strong> optional but bonus points for solving this</p>
+</li>
+<li>
+<p><strong>Question:</strong> What type of models should we support? Is it just one type of task like text classification or can it be anything (image classification, linear regression, K-means clustering, video segmentation, image generation, GAN, etc)<br />
+<strong>Answer:</strong> This platform should be vendor and model agnostic. Think of it this way: You have N types of models. Their input and output vary. How do you still wrap this complexity under a single predict API?</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should the users be able to choose what type of hardware they need for their training task?<br />
+<strong>Answer:</strong> The users shouldn’t need to know this. Assume all training jobs require GPUs.</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should the users be allowed to write their custom training code?<br />
+<strong>Answer:</strong> Assume they already have and it's in a separate service.</p>
+</li>
+</ol>
+<h3 id="evaluation">Evaluation</h3>
+<ol>
+<li>
+<p><strong>Question:</strong> Should they be allowed to edit the loss functions? what about customizing the evaluation script?<br />
+<strong>Answer:</strong> Yes</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should they be able to compare the evaluation results of multiple models that they have trained?<br />
+<strong>Answer:</strong> Optional but bonus points for solving this</p>
+</li>
+<li>
+<p><strong>Question</strong>: Should some triggers automatically deploy the model when the evaluation results cross a certain threshold?<br />
+<strong>Answer:</strong> Out of Scope.</p>
+</li>
+</ol>
+<h3 id="serving">Serving</h3>
+<ol>
+<li>
+<p><strong>Question:</strong> What type of machines are they looking to deploy it on? Is it an on-cloud or some edge device or some on-prem server?<br />
+<strong>Answer:</strong> On Cloud</p>
+</li>
+<li>
+<p><strong>Question:</strong> Do they require only HTTP serving? Do they need additional servings like gRPC?<br />
+<strong>Answer:</strong> HTTP for now</p>
+</li>
+<li>
+<p><strong>Question:</strong> Do they need support for auto-scaling enabled?<br />
+<strong>Answer:</strong> They shouldn’t need to know what this is. They just want a model trained but your business will crash without it.</p>
+</li>
+<li>
+<p><strong>Question</strong>: What kind of service and ML metrics do they want to see?<br />
+<strong>Answer:</strong> ML metric depends on the model. Service metrics like RQS and logs should be enabled.</p>
+</li>
+<li>
+<p><strong>Question:</strong> What is the maximum latency they are expecting?<br />
+<strong>Answer:</strong> 100 ms</p>
+</li>
+<li>
+<p><strong>Question:</strong> How much can the load of requests per model vary?<br />
+<strong>Answer:</strong> Each model gets a uniform amount of load</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should the users have the flexibility of writing their own docker image? or can I use a base image of my own?<br />
+<strong>Answer:</strong> Too much work exposed by letting them know docker etc.</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should they be allowed to apply some inference optimizations like half-precision, quantization, and pruning?<br />
+<strong>Answer:</strong> Out of scope</p>
+</li>
+<li>
+<p><strong>Question:</strong> Should they require batch processing or is every model supposed to be giving predictions in real-time? <strong>Answer:</strong> Real-time is required</p>
+</li>
+<li>
+<p><strong>Question:</strong> Do they require a staging environment?<br />
+<strong>Answer:</strong> Optional</p>
+</li>
+<li>
+<p><strong>Question:</strong> Do they require deployment strategies like A/B testing or canary deployment?<br />
+<strong>Answer:</strong> Yes</p>
+</li>
+</ol>
+<h3 id="misc">Misc</h3>
+<ol>
+<li><strong>Question:</strong> Do my users know how to use a notebook?<br />
+<strong>Answer:</strong> Yes</li>
+</ol>
+<h3 id="retrospective-questions">Retrospective Questions</h3>
+<p>While I was compiling these questions, I realized I did not bother enough about the user persona back then:</p>
+<ol>
+<li>Who are they?</li>
+<li>What is their technical background?</li>
+<li>What is and is not their expertise in the whole Software and ML development lifecycle?</li>
+<li>What problems are they facing currently?</li>
+<li>What technologies are they most comfortable with?</li>
+<li>What level of control/abstraction would fit them?</li>
+</ol>
+<h1 id="solutioning">Solutioning</h1>
+<p>I've started studying the design of existing ML tools like MLFlow, Sematic, TrueFoundry, AWS Sagemaker, Label Studio ML Backend, Kubeflow, etc. Below are a few rough sketches of how I thought each component would look like and how they integrate.</p>
+<h2 id="frontend">Frontend</h2>
+<p>The primary interface to interact with the ML platform would be a CLI. There will be CLI commands via which a user can carry out the following:</p>
+<ol>
+<li>User authentication</li>
+<li>Submit a training/evaluation request with custom params</li>
+<li>List previous training/evaluation requests</li>
+<li>View and compare metrics from different runs</li>
+<li>Inspect training/evaluation progress of an active run</li>
+</ol>
+<p>There can also exist a UI via which the user can carry out all these actions.</p>
+<h2 id="data-1">Data</h2>
+<ol>
+<li>The datasets can be of any type and be present in any form.</li>
+<li>It is expected that the users have the data dump with them via ETL pipelines from data sources like </li>
+<li>How the data gets loaded (data loaders, streamed, curled via a URL, inbuilt datasets from pytorch or hugging face, etc) and pre-processed will be written by the user.</li>
+<li>DVC can be employed to track the data versions via git itself.</li>
+<li>The file path of the data will be an ENV variable. When executing locally, the variable can be set to <code>/root/user/local/path</code>. When executing remotely, the data can be uploaded to a storage location which will be mounted to the machine where training/evaluation is conducted. Hence the variable can be set to <code>/mnt/cloud/storage/location</code>.</li>
+</ol>
+<h2 id="development-setup">Development Setup</h2>
+<h3 id="code-structure">Code Structure</h3>
+<p>The users can write an ML model with the following structure. They are free to use any library or any model or any dependencies. They just have to have a model created in this format.</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#8fbfdc;">class </span><span style="color:#ffb964;">MyModel</span><span>():
+</span><span>	</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">__init__</span><span>():
+</span><span>
+</span><span>	</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">train</span><span>():
+</span><span>
+</span><span>	</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">test</span><span>():
+</span><span>
+</span><span>	</span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">predict</span><span>(): </span><span style="color:#888888;"># must return a json object
+</span></code></pre>
+<h3 id="parameterization">Parameterization</h3>
+<p>Users can use special variables inside their code that our library provides. These values will have a default value. They can also override them when creating a training request. Let's call our library SDK <code>mllib</code> for now.</p>
+<pre data-lang="python" style="background-color:#151515;color:#e8e8d3;" class="language-python "><code class="language-python" data-lang="python"><span>
+</span><span style="color:#888888;"># model.py
+</span><span>
+</span><span style="color:#8fbfdc;">from </span><span>mllib </span><span style="color:#8fbfdc;">import </span><span>sentry_plugin
+</span><span style="color:#8fbfdc;">import </span><span>sklearn </span><span style="color:#888888;"># global dependency
+</span><span>
+</span><span>sentry_plugin.</span><span style="color:#ffb964;">enable</span><span>()
+</span><span>
+</span><span style="color:#8fbfdc;">class </span><span style="color:#ffb964;">MyModel</span><span>():
+</span><span>    </span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">__init__</span><span>(</span><span style="color:#ffb964;">self</span><span>):
+</span><span>        </span><span style="color:#ffb964;">self</span><span>.learning_rate = mllib.</span><span style="color:#ffb964;">Param</span><span>(</span><span style="color:#cf6a4c;">0.1</span><span>)
+</span><span>        </span><span style="color:#ffb964;">self</span><span>.train_data_path = mllib.</span><span style="color:#ffb964;">Param</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">/path/to/train/dataset</span><span style="color:#556633;">&quot;</span><span>)
+</span><span>        </span><span style="color:#ffb964;">self</span><span>.evaluation_data_path = mllib.</span><span style="color:#ffb964;">Param</span><span>(</span><span style="color:#556633;">&quot;</span><span style="color:#99ad6a;">/path/to/evaluation/dataset</span><span style="color:#556633;">&quot;</span><span>)
+</span><span>
+</span><span>    </span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">train</span><span>():
+</span><span>        </span><span style="color:#8fbfdc;">import </span><span>numpy </span><span style="color:#8fbfdc;">as </span><span>np </span><span style="color:#888888;"># local dependency for training step alone
+</span><span>        </span><span style="color:#8fbfdc;">import </span><span>optuna
+</span><span>
+</span><span>    </span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">evaluate</span><span>():
+</span><span>        </span><span style="color:#8fbfdc;">import </span><span>torch </span><span style="color:#888888;"># local dependency for evaluation step alone
+</span><span>
+</span><span>
+</span><span>    </span><span style="color:#8fbfdc;">def </span><span style="color:#fad07a;">predict</span><span>(): </span><span style="color:#888888;"># must return a json object
+</span><span>        </span><span style="color:#8fbfdc;">import </span><span>pands </span><span style="color:#8fbfdc;">as </span><span>pd
+</span><span>        </span><span style="color:#8fbfdc;">import </span><span>tf
+</span><span>
+</span><span>        </span><span style="color:#8fbfdc;">return </span><span>prediction
+</span></code></pre>
+<h3 id="training-evaluation-requests">Training/Evaluation Requests</h3>
+<p>The user can make a training/evaluation request via the CLI in this fashion:</p>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffb964;">mllib</span><span> model.py</span><span style="color:#ffb964;"> --train --learning_rate</span><span>=0.001</span><span style="color:#ffb964;"> --local
+</span></code></pre>
+<p>This will use the ENV variables defined in <code>.env.local</code> and run the code defined in <code>train</code> function locally with a learning_rate of <code>0.001</code>. </p>
+<p>Likewise for running <strong>evaluation</strong> as well:</p>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffb964;">mllib</span><span> model.py</span><span style="color:#ffb964;"> --evaluate --learning_rate</span><span>=0.001</span><span style="color:#ffb964;"> --local
+</span></code></pre>
+<p>Once the user is satisfied that the model is working properly and they have made some verifications to gain confidence, the training can be switched to the cloud via:</p>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffb964;">mllib</span><span> model.py</span><span style="color:#ffb964;"> --train --learning_rate</span><span>=0.001</span><span style="color:#ffb964;"> --remote
+</span></code></pre>
+<p>Upon the execution of this command, the training code is packaged, and submitted to a pool of GPU-enabled machines where code inside the <strong>train</strong> and <strong>evaluate</strong>** functions is executed.</p>
+<h3 id="deployment">Deployment</h3>
+<p>Executing the below command would take the predict function and serves via <a href="https://firefly-python.readthedocs.io/en/latest/">firefly-python</a> in a serverless fashion.</p>
+<pre data-lang="bash" style="background-color:#151515;color:#e8e8d3;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#ffb964;">mllib</span><span> model.py</span><span style="color:#ffb964;"> --serve
+</span></code></pre>
+<h2 id="monitoring">Monitoring</h2>
+<h3 id="system-monitoring">System Monitoring</h3>
+<ol>
+<li>The sentry plugin can be enabled to capture exceptions.</li>
+<li>Prometheus-Loki-Grafana to capture logs and display them to the user. Additionally, the user can customize the Grafana dashboard with custom PromQL queries to their liking.</li>
+</ol>
+<h3 id="ml-model-monitoring">ML Model Monitoring</h3>
+<ol>
+<li>All evaluation results made via <code>mllib model.py --evaluate</code> will be available for visualizing in the UI.</li>
+<li>For continuous monitoring post-deployment, the evaluate function can be run on a schedule where the dataset will be sourced from annotation tools like Label Studio.</li>
+</ol>
+<h2 id="missing-pieces">Missing Pieces</h2>
+<p>I did not think through the following aspects when designing the solution. Mostly they revolve around reliability and failure resolution</p>
+<ol>
+<li>If a training request has failed, what should the resolution flow look like?<br />
+a. What if it failed because of a runtime error? what would be different if it was a network/systems error?</li>
+<li>Once the training is done, what happens to the artifacts (model checkpoints, loss graphs, etc)? Where do they get stored and how do they get accessed?</li>
+<li>How exactly do we handle the queue of training and evaluation requests?</li>
+<li>How to seamlessly shift between local and remote execution?</li>
+<li>What if the user wants to use their own cloud resources due to data privacy concerns?</li>
+<li>How to package the dependencies and container creation without getting in the user's way? Especially because the users do not have a good understanding of docker.</li>
+<li>What is the right way to handle data movement between the local execution and the cloud execution?</li>
+<li>How is the fleet of GPU-enabled systems managed and receive training/evaluation requests?</li>
+<li>...some more?</li>
+</ol>
+<h1 id="final-note">Final Note</h1>
+<p>I've had great fun and learning working on this exercise. There are just too many moving components across the product, service, and infrastructure level and I was forced to think about a lot of aspects that lie outside my expertise. I realized I liked designing not just for usability but for also the user's delight.</p>
+<p>I might have a go at it again, this time with better research, mockups, and maybe even a PoC 👀</p>
+
+    </article>
+</section>
+</article>
+    <footer>
+        <div class="social">
+            <ul>
+                <li>
+                    <a href="https://github.com/nvinayvarma189" title="Github"><i data-feather="github"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/roronoazoro_189" title="Twitter"><i data-feather="twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://vinay.lol/atom.xml" title="Vinay Varma"><i
+                            data-feather="rss"></i></a>
+                </li>
+            </ul>
+        </div>
+        <p>
+            © Vinay Varma 2025<br>
+            Powered by <a target="_blank" href="https://getzola.org/">Zola</a>
+        </p>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+    <!-- <script type="text/javascript" src="https://vinay.lol/elasticlunr.min.js"></script>
+    <script type="text/javascript" src="https://vinay.lol/search_index.en.js"></script>
+    <script type="text/javascript" src="https://vinay.lol/js/search.js"></script> -->
+</body>
+
+</html>
