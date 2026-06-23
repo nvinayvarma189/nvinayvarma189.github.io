@@ -1,5 +1,6 @@
 # The base URL of the site; the only required configuration variable.
-base_url = "https://vinay.lol"
+# NOTE: Use the GitHub Pages URL while the custom domain is not renewed.
+base_url = "https://nvinayvarma189.github.io"
 
 # The site title and description; used in feeds by default.
 title = "Vinay Varma"
