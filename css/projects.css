@@ -1,0 +1,26 @@
+.projects-table,
+.projects-row,
+.projects-data {
+    border: none;
+}
+
+#projects-date {
+    width: 100px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#projects-name {
+    width: 150px;
+    text-align: center;
+    vertical-align: top;
+}
+
+#projects-description {
+    width: 500px;
+    text-align: left
+}
+
+td {
+    padding-bottom: 2em;
+}
